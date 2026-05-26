@@ -13,6 +13,7 @@ const TYPE_LABELS: Record<string, string> = {
   comparative: "Comparisons",
   commercial: "Buying Guides",
   review: "Reviews",
+  more: "More Electronics",
 };
 
 function escapeHtml(s: string): string {

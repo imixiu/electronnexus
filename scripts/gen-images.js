@@ -7,7 +7,7 @@ const SITE = 'electronnexus';
 const SITE_DIR = '/root/vercel-projects/electronnexus';
 const API_KEY = process.env.DASHSCOPE_API_KEY;
 const BLOB_TOKEN = process.env.BLOB_TOKEN;
-const CONCURRENCY = 8;
+const CONCURRENCY = 5;
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
 

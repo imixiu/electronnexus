@@ -17,5 +17,6 @@ export const siteConfig = {
     { key: "smarthome", label: "Smart Home", description: "Smart home devices, IoT gadgets, and home automation guides." },
     { key: "wearables", label: "Wearables", description: "Smartwatch, fitness tracker, and wearable technology reviews and news." },
     { key: "gaming", label: "Gaming & Entertainment", description: "Gaming consoles, accessories, monitors, and entertainment tech coverage." },
+    { key: "more", label: "More Electronics", description: "TVs, cameras, drones, and other electronics reviews and guides." },
   ] as { key: string; label: string; description: string }[],
 };
