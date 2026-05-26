@@ -11,7 +11,6 @@ const PAGE_SIZE = 24;
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;
-  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
@@ -27,14 +26,12 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
+export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category } = await params;
-  const { page: pageStr } = await searchParams;
   const cat = siteConfig.categories.find((c) => c.key === category);
   if (!cat) notFound();
 
-  const page = Math.max(1, parseInt(pageStr || "1", 10) || 1);
-  const { articles, total } = await getArticlesByCategory(category, page, PAGE_SIZE);
+  const { articles, total } = await getArticlesByCategory(category, 1, PAGE_SIZE);
   const totalPages = Math.ceil(total / PAGE_SIZE);
 
   return (
@@ -52,19 +49,12 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
 
       {totalPages > 1 && (
         <nav className="pagination">
-          {page > 1 && (
-            <Link href={`/${category}?page=${page - 1}`} className="pagination-btn">
-              ← Prev
-            </Link>
-          )}
           <span className="pagination-info">
-            Page {page} of {totalPages}
+            Page 1 of {totalPages}
           </span>
-          {page < totalPages && (
-            <Link href={`/${category}?page=${page + 1}`} className="pagination-btn">
-              Next →
-            </Link>
-          )}
+          <Link href={`/${category}/page/2`} className="pagination-btn">
+            Next →
+          </Link>
         </nav>
       )}
     </div>
