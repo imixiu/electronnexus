@@ -116,14 +116,14 @@ export async function GET() {
     // --- Featured Stories ---
     html = html.replace(
       /(<div class="featured-grid">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- LATEST)/,
-      `$1\n${buildFeaturedMain(featuredMain)}\n<div class="featured-side">\n${buildFeaturedSide(featuredSide)}\n</div>\n</div>\n</div>\n</section>\n\n<!-- LATEST`
+      (_match, p1) => `${p1}\n${buildFeaturedMain(featuredMain)}\n<div class="featured-side">\n${buildFeaturedSide(featuredSide)}\n</div>\n</div>\n</div>\n</section>\n\n<!-- LATEST`
     );
 
     // --- Latest Articles ---
     if (latestCards.length > 0) {
       html = html.replace(
         /(<div class="articles-grid">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- EXPERT REVIEWS)/,
-        `$1\n${buildArticleCards(latestCards)}\n</div>\n</div>\n</section>\n\n<!-- EXPERT REVIEWS`
+        (_match, p1) => `${p1}\n${buildArticleCards(latestCards)}\n</div>\n</div>\n</section>\n\n<!-- EXPERT REVIEWS`
       );
     }
 
@@ -131,7 +131,7 @@ export async function GET() {
     if (trending.length > 0) {
       html = html.replace(
         /(<div class="trending-list">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- NEWSLETTER)/,
-        `$1\n${buildTrending(trending)}\n</div>\n</div>\n</section>\n\n<!-- NEWSLETTER`
+        (_match, p1) => `${p1}\n${buildTrending(trending)}\n</div>\n</div>\n</section>\n\n<!-- NEWSLETTER`
       );
     }
   } catch (e) {
