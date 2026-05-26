@@ -735,3 +735,40 @@ a:hover {
     font-size: 1.5rem;
   }
 }
+
+/* Breadcrumb */
+.breadcrumb {
+  margin-bottom: 1rem;
+}
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: var(--text-dim);
+  margin-right: 0;
+}
+.breadcrumb-item a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+.breadcrumb-current {
+  color: var(--text-muted);
+}

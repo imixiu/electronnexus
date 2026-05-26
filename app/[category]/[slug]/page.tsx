@@ -6,6 +6,7 @@ import { ArticleHeader } from "@/components/article/ArticleHeader";
 import { ArticleBody } from "@/components/article/ArticleBody";
 import { ArticleToc } from "@/components/article/ArticleToc";
 import { RelatedArticles } from "@/components/article/RelatedArticles";
+import { Breadcrumb, BreadcrumbJsonLd, getCategoryLabel } from "@/components/article/Breadcrumb";
 
 export const dynamic = "force-dynamic";
 
@@ -35,9 +36,45 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   const relatedArticles = await getRelatedArticles(article.type, article.id);
 
+  const categoryLabel = getCategoryLabel(category);
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: categoryLabel, href: `/${category}` },
+    { label: article.title },
+  ];
+
+  // Article JSON-LD
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description || "",
+    image: article.img || undefined,
+    author: article.author
+      ? { "@type": "Person", name: article.author }
+      : { "@type": "Organization", name: siteConfig.title },
+    datePublished: article.publishDate || undefined,
+    dateModified: article.updatedAt || article.publishDate || undefined,
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.title,
+      logo: { "@type": "ImageObject", url: `${siteConfig.url}/favicon.ico` },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/${category}/${slug}`,
+    },
+  };
+
   return (
     <div className="article-layout">
+      <BreadcrumbJsonLd items={breadcrumbItems} siteUrl={siteConfig.url} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="article-main">
+        <Breadcrumb items={breadcrumbItems} />
         <article className="article-container">
           <ArticleHeader article={article} />
           <ArticleBody body={article.body} />

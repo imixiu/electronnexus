@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   return {
     title: `${cat.label} - ${siteConfig.title}`,
     description: cat.description,
+    alternates: {
+      canonical: `${siteConfig.url}/${category}`,
+    },
   };
 }
 
