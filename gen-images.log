@@ -1,0 +1,75 @@
+DB URL length: 143
+DASHSCOPE key length: 35
+BLOB token length: 62
+=== Author Headshots (8 images) ===
+(node:847625) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  [0/8] team FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+  [0/8] alex-chen FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+  [0/8] sarah-mitchell FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+  [0/8] david-kumar FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+  [0/8] emma-wilson FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+  [0/8] james-park FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+  [0/8] lisa-tanaka FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+  [0/8] mike-russo FAILED: Blob upload failed: Error: No existing credentials found. Please run `vercel log
+Authors done: 0/8
+
+=== Article Covers: 707 articles, concurrency=8 ===
+  FAIL [1325313] 20-smartphone-features-you-didnt-know-existed: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325309] why-razers-health-sensor-is-a-game-changer-for-mobile-photography: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325314] is-the-sennheiser-xps-15-the-best-value-phone-of-2025: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325307] how-apples-new-titanium-build-technology-changes-everything: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325312] why-asuss-quantum-dot-is-a-game-changer-for-mobile-photography: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  10/707 | OK=0 FAIL=10 | 52s | 0.0/s
+  20/707 | OK=0 FAIL=20 | 78s | 0.0/s
+  30/707 | OK=0 FAIL=30 | 104s | 0.0/s
+  40/707 | OK=0 FAIL=40 | 134s | 0.0/s
+  50/707 | OK=0 FAIL=50 | 174s | 0.0/s
+  60/707 | OK=0 FAIL=60 | 204s | 0.0/s
+  70/707 | OK=0 FAIL=70 | 231s | 0.0/s
+  80/707 | OK=0 FAIL=80 | 262s | 0.0/s
+  90/707 | OK=0 FAIL=90 | 301s | 0.0/s
+  100/707 | OK=0 FAIL=100 | 329s | 0.0/s
+  110/707 | OK=0 FAIL=110 | 360s | 0.0/s
+  120/707 | OK=0 FAIL=120 | 394s | 0.0/s
+  130/707 | OK=0 FAIL=130 | 432s | 0.0/s
+  140/707 | OK=0 FAIL=140 | 460s | 0.0/s
+  150/707 | OK=0 FAIL=150 | 493s | 0.0/s
+  160/707 | OK=0 FAIL=160 | 525s | 0.0/s
+  170/707 | OK=0 FAIL=170 | 559s | 0.0/s
+  180/707 | OK=0 FAIL=180 | 589s | 0.0/s
+  190/707 | OK=0 FAIL=190 | 624s | 0.0/s
+  200/707 | OK=0 FAIL=200 | 654s | 0.0/s
+  210/707 | OK=0 FAIL=210 | 688s | 0.0/s
+  220/707 | OK=0 FAIL=220 | 718s | 0.0/s
+  230/707 | OK=0 FAIL=230 | 754s | 0.0/s
+  240/707 | OK=0 FAIL=240 | 792s | 0.0/s
+  250/707 | OK=0 FAIL=250 | 821s | 0.0/s
+  260/707 | OK=0 FAIL=260 | 858s | 0.0/s
+  270/707 | OK=0 FAIL=270 | 891s | 0.0/s
+  280/707 | OK=0 FAIL=280 | 921s | 0.0/s
+  290/707 | OK=0 FAIL=290 | 950s | 0.0/s
+  300/707 | OK=0 FAIL=300 | 987s | 0.0/s
+  310/707 | OK=0 FAIL=310 | 1020s | 0.0/s
+  320/707 | OK=0 FAIL=320 | 1051s | 0.0/s
+  330/707 | OK=0 FAIL=330 | 1085s | 0.0/s
+  340/707 | OK=0 FAIL=340 | 1112s | 0.0/s
+  350/707 | OK=0 FAIL=350 | 1150s | 0.0/s
+  360/707 | OK=0 FAIL=360 | 1182s | 0.0/s
+  370/707 | OK=0 FAIL=370 | 1211s | 0.0/s
+  380/707 | OK=0 FAIL=380 | 1240s | 0.0/s
+  390/707 | OK=0 FAIL=390 | 1277s | 0.0/s
+  400/707 | OK=0 FAIL=400 | 1306s | 0.0/s
+  410/707 | OK=0 FAIL=410 | 1335s | 0.0/s

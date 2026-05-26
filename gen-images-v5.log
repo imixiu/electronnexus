@@ -1,0 +1,28 @@
+TOKEN_LEN=0
+DB URL length: 143
+DASHSCOPE key length: 35
+BLOB token length: 62
+(node:921370) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+=== Article Covers: 707 articles, concurrency=8 ===
+  FAIL [1325309] why-razers-health-sensor-is-a-game-changer-for-mobile-photography: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325307] how-apples-new-titanium-build-technology-changes-everything: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325311] the-complete-guide-to-choosing-a-phone-under-1500: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325310] the-google-thinkpad-x1-battery-life-test-real-world-results: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  FAIL [1325312] why-asuss-quantum-dot-is-a-game-changer-for-mobile-photography: Blob upload failed: Error: No existing credentials found. Please run `vercel login` or pass "--token"
+Learn More: https://err.sh/vercel/no-credentials
+  10/707 | OK=0 FAIL=10 | 51s | 0.0/s
+  20/707 | OK=0 FAIL=20 | 79s | 0.0/s
+  30/707 | OK=0 FAIL=30 | 105s | 0.0/s
