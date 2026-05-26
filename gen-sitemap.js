@@ -15,9 +15,9 @@ async function main() {
 
   const urls = [];
   urls.push(`https://${DOMAIN}/`);
-  urls.push(`https://${DOMAIN}/author/team`);
+  urls.push(`https://${DOMAIN}/authors/team`);
   for (const { slug } of authors) {
-    if (slug !== 'team') urls.push(`https://${DOMAIN}/author/${slug}`);
+    if (slug !== 'team') urls.push(`https://${DOMAIN}/authors/${slug}`);
   }
   const types = [...new Set(articles.filter(a => a.type).map(a => a.type))];
   for (const t of types) urls.push(`https://${DOMAIN}/${t}`);

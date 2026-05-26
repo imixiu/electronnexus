@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://electronnexus.com/sitemap/sitemap1.xml</loc></sitemap>
-  <sitemap><loc>https://electronnexus.com/sitemap/sitemap2.xml</loc></sitemap>
-  <sitemap><loc>https://electronnexus.com/sitemap/sitemap3.xml</loc></sitemap>
+<sitemap>
+<loc>https://electronnexus.com/sitemap/sitemap1.xml</loc>
+<lastmod>2026-05-26</lastmod>
+</sitemap>
+<sitemap>
+<loc>https://electronnexus.com/sitemap/sitemap2.xml</loc>
+<lastmod>2026-05-26</lastmod>
+</sitemap>
+<sitemap>
+<loc>https://electronnexus.com/sitemap/sitemap3.xml</loc>
+<lastmod>2026-05-26</lastmod>
+</sitemap>
 </sitemapindex>
