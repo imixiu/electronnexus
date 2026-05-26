@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="site-header">
       <Link href="/" className="logo">
-        {siteConfig.title}
+        Electron<span style={{ fontWeight: 400, opacity: 0.7 }}>Nexus</span>
       </Link>
       <nav className="main-nav">
         {siteConfig.categories.map((cat) => (

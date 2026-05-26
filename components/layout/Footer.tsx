@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-content">
         <div className="footer-brand">
-          <span className="footer-logo">{siteConfig.title}</span>
+          <span className="footer-logo">ElectronNexus</span>
           <p>{siteConfig.description}</p>
         </div>
         <nav className="footer-nav">
@@ -23,12 +23,13 @@ export function Footer() {
           <h4>Site</h4>
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/authors">Authors</Link></li>
+            <li><Link href="/authors">Our Authors</Link></li>
+            <li><Link href="/authors/team">About Us</Link></li>
           </ul>
         </nav>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} {siteConfig.title}. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} ElectronNexus. All rights reserved.</p>
       </div>
     </footer>
   );
