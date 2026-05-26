@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   return {
     title: `${article.title} - ${siteConfig.title}`,
     description: article.description,
+    alternates: {
+      canonical: `${siteConfig.url}/${category}/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.description,
@@ -67,32 +70,34 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   };
 
   return (
-    <div className="article-layout">
+    <>
       <BreadcrumbJsonLd items={breadcrumbItems} siteUrl={siteConfig.url} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <div className="article-main">
-        <Breadcrumb items={breadcrumbItems} />
-        <article className="article-container">
-          <ArticleHeader article={article} />
-          <ArticleBody body={article.body} />
-          <div className="author-section-card">
-            <div className="author-avatar">
-              {article.author ? article.author.charAt(0).toUpperCase() : "?"}
+      <div className="article-layout">
+        <div className="article-main">
+          <Breadcrumb items={breadcrumbItems} />
+          <article className="article-container">
+            <ArticleHeader article={article} />
+            <ArticleBody body={article.body} />
+            <div className="author-section-card">
+              <div className="author-avatar">
+                {article.author ? article.author.charAt(0).toUpperCase() : "?"}
+              </div>
+              <div className="author-info">
+                <h3>{article.author || `${siteConfig.name} Team`}</h3>
+                <p>Contributing writer at {siteConfig.title}.</p>
+              </div>
             </div>
-            <div className="author-info">
-              <h3>{article.author || `${siteConfig.name} Team`}</h3>
-              <p>Contributing writer at {siteConfig.title}.</p>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
+        <aside className="article-sidebar">
+          <ArticleToc body={article.body} />
+          <RelatedArticles articles={relatedArticles} />
+        </aside>
       </div>
-      <aside className="article-sidebar">
-        <ArticleToc body={article.body} />
-        <RelatedArticles articles={relatedArticles} />
-      </aside>
-    </div>
+    </>
   );
 }

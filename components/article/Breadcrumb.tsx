@@ -42,7 +42,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
   );
 }
 
-export function BreadcrumbJsonLd(items: BreadcrumbItem[], siteUrl: string) {
+export function BreadcrumbJsonLd({ items, siteUrl }: { items: BreadcrumbItem[]; siteUrl: string }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
