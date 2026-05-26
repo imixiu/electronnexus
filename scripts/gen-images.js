@@ -24,9 +24,9 @@ const authorPrompts = {
 
 const topicPrompts = {
   'smartphones': 'smartphone device on clean surface, modern mobile technology, professional product photography, editorial style',
-  'laptops-computers': 'laptop computer on clean desk, modern workspace, professional product photography, editorial style',
-  'audio-gear': 'premium headphones and audio equipment, professional product photography, studio lighting, editorial style',
-  'smart-home': 'smart home devices, connected technology, IoT gadgets, modern interior, professional editorial photography',
+  'laptopspcs': 'laptop computer on clean desk, modern workspace, professional product photography, editorial style',
+  'audio': 'premium headphones and audio equipment, professional product photography, studio lighting, editorial style',
+  'smarthome': 'smart home devices, connected technology, IoT gadgets, modern interior, professional editorial photography',
   'wearables': 'smartwatch on wrist, wearable technology, fitness tracker, professional product photography, clean background',
   'gaming': 'gaming peripherals, RGB keyboard mouse, gaming monitor, professional product photography, dramatic lighting',
 };

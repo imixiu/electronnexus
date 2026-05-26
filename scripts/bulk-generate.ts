@@ -4,12 +4,12 @@ const SITE = "electronnexus";
 const TARGET = parseInt(process.env.TARGET_ARTICLES || "1000");
 
 // ─── TOPICS & AUTHORS ───
-const topics = ["smartphones", "laptops-computers", "audio-gear", "smart-home", "wearables", "gaming"];
+const topics = ["smartphones", "laptopspcs", "audio", "smarthome", "wearables", "gaming"];
 const authorsByTopic: Record<string, string[]> = {
   smartphones: ["Alex Chen", "Mike Russo"],
-  "laptops-computers": ["David Kumar", "Mike Russo"],
-  "audio-gear": ["Sarah Mitchell", "Alex Chen"],
-  "smart-home": ["Emma Wilson", "Mike Russo"],
+  "laptopspcs": ["David Kumar", "Mike Russo"],
+  "audio": ["Sarah Mitchell", "Alex Chen"],
+  "smarthome": ["Emma Wilson", "Mike Russo"],
   wearables: ["Lisa Tanaka", "Sarah Mitchell"],
   gaming: ["James Park", "David Kumar"],
 };
@@ -33,7 +33,7 @@ const titleTemplates: Record<string, string[]> = {
     "Smartphone Buying Guide {year}: {number} Things to Consider",
     "Is the {brand} {model} the Best Value Phone of {year}?",
   ],
-  "laptops-computers": [
+  "laptopspcs": [
     "Why the {brand} {model} Is the Perfect Laptop for {use_case}",
     "{brand} {model} vs {brand2} {model2}: Which Should You Buy?",
     "{number} Laptops That Deliver the Best Battery Life in {year}",
@@ -50,7 +50,7 @@ const titleTemplates: Record<string, string[]> = {
     "Gaming Laptop vs Desktop: Which Gives Better Value in {year}?",
     "The Ultimate {use_case} Workstation Setup Guide",
   ],
-  "audio-gear": [
+  "audio": [
     "Why the {brand} {model} Are the Best Headphones for {use_case}",
     "{brand} {model} vs {brand2} {model2}: Sound Quality Showdown",
     "{number} Wireless Earbuds That Rival Over-Ear Headphones",
@@ -67,7 +67,7 @@ const titleTemplates: Record<string, string[]> = {
     "Studio Monitor Buying Guide: {number} Options for Every Budget",
     "Why {brand}'s {feature} Codec Is Changing High-Res Audio",
   ],
-  "smart-home": [
+  "smarthome": [
     "Why the {brand} {model} Is the Best Smart {device} for Your Home",
     "{brand} {model} vs {brand2} {model2}: Smart Home Showdown",
     "{number} Smart Home Devices Every Beginner Should Own",
@@ -145,17 +145,17 @@ function makeIntro(topic: string): string {
       "Whether you're upgrading from an aging device or switching ecosystems entirely, today's smartphones offer capabilities that would have seemed science fiction just five years ago. From computational photography to on-device AI, the technology packed into these pocket-sized powerhouses continues to astound.",
       "Finding the perfect smartphone isn't just about specs and benchmarks — it's about how a device fits into your life. Camera quality, battery endurance, software support, and ecosystem integration all play crucial roles in determining which phone is right for you.",
     ],
-    "laptops-computers": [
+    "laptopspcs": [
       "In an era where remote work and digital creativity are the norm, choosing the right laptop or computer has never been more important. The lines between work machines, creative workstations, and entertainment devices continue to blur.",
       "The computing landscape has shifted dramatically in recent years. ARM-based processors now compete head-to-head with traditional x86 chips, displays have reached levels of color accuracy that satisfy professional creators, and battery life has finally caught up with our demands.",
       "Whether you're a developer, designer, student, or business professional, the right computer can transform your productivity. But with so many form factors, processors, and configurations available, making the right choice requires careful consideration.",
     ],
-    "audio-gear": [
+    "audio": [
       "Audio quality can transform your daily experience — from morning commutes to late-night listening sessions. The personal audio market has exploded with options, from tiny true wireless earbuds to audiophile-grade over-ear headphones.",
       "The way we consume audio has fundamentally changed. Streaming services now offer lossless and spatial audio, wireless codecs continue to improve, and noise cancellation technology has reached levels that were once exclusive to professional environments.",
       "Great audio gear doesn't just reproduce sound — it reveals details you've never heard before, creates immersive soundstages, and adapts to your environment. Whether you're a casual listener or a dedicated audiophile, there's never been a better time to invest in quality audio equipment.",
     ],
-    "smart-home": [
+    "smarthome": [
       "Smart home technology has matured from a novelty for tech enthusiasts to a practical solution for everyday homeowners. With interoperability standards like Matter finally gaining traction, building a connected home has never been more accessible.",
       "The promise of a smart home — lights that adjust to your mood, thermostats that learn your schedule, security systems you can monitor from anywhere — is no longer a futuristic dream. Today's smart home devices are reliable, affordable, and increasingly easy to set up.",
       "Building a smart home doesn't mean replacing everything at once. The most successful smart home setups grow organically, starting with a few key devices and expanding as you discover what works best for your lifestyle and living situation.",
@@ -185,7 +185,7 @@ function makeSections(topic: string): string[] {
       {h: "Software and Ecosystem", p: "The software experience often matters more than hardware specifications. Clean, well-maintained operating systems with regular security updates provide better long-term value than raw specs alone. Ecosystem integration — how well your phone works with your other devices, smart home products, and services — is increasingly a deciding factor for many buyers."},
       {h: "Build Quality and Durability", p: "Premium smartphones now feature aerospace-grade materials including titanium frames, ceramic backs, and the latest generation of scratch-resistant glass. IP68 water and dust resistance is standard on flagship devices, and many mid-range phones now offer respectable durability as well. Drop resistance has improved dramatically with newer glass formulations."},
     ],
-    "laptops-computers": [
+    "laptopspcs": [
       {h: "Processor Performance Benchmarks", p: "The CPU landscape has diversified significantly. Apple's M-series chips continue to push the boundaries of performance-per-watt, while Intel and AMD battle for supremacy in the x86 space. For most users, any current-generation processor will handle daily tasks effortlessly — the real differences emerge in sustained workloads like video rendering, code compilation, and scientific computing."},
       {h: "Display Quality for Professionals", p: "Laptop displays have improved dramatically in recent years. Mini-LED and OLED panels offer exceptional contrast ratios, wide color gamuts covering 100% DCI-P3, and factory calibration accurate enough for professional color grading. High refresh rates (120Hz+) are no longer exclusive to gaming laptops, appearing in ultrabooks and creative workstations alike."},
       {h: "Keyboard and Trackpad Experience", p: "The input devices you interact with every day deserve careful consideration. Modern laptop keyboards offer improved key travel, better tactile feedback, and more reliable mechanisms than previous generations. Trackpads have grown larger and more responsive, with haptic feedback replacing mechanical clicks on premium models."},
@@ -193,7 +193,7 @@ function makeSections(topic: string): string[] {
       {h: "Port Selection and Connectivity", p: "Despite the trend toward thinner designs, port selection remains crucial for productivity. Thunderbolt 4, USB-C with Power Delivery, HDMI 2.1, and SD card readers each serve important roles. The best laptops balance modern connectivity standards with practical legacy ports, reducing the need for dongles and adapters."},
       {h: "Storage Speed and Capacity", p: "NVMe SSDs have become the universal standard, but not all solid-state drives are created equal. PCIe Gen 4 drives offer sequential read speeds exceeding 7,000 MB/s, dramatically improving boot times, application loading, and file transfer operations. For creative professionals working with large files, storage speed can be as important as CPU performance."},
     ],
-    "audio-gear": [
+    "audio": [
       {h: "Sound Signature and Frequency Response", p: "Every headphone and speaker has a unique sound signature — the way it emphasizes or de-emphasizes different frequency ranges. Neutral signatures aim for accuracy, while V-shaped signatures boost bass and treble for a more exciting listen. Understanding your preference helps narrow the vast field of options to those that will truly satisfy your ears."},
       {h: "Active Noise Cancellation Technology", p: "Modern ANC systems use multiple microphones and sophisticated algorithms to counteract ambient noise in real-time. The best implementations adapt to your environment automatically, offering stronger cancellation on planes and commutes while remaining transparent when you need awareness. Some models now offer adjustable ANC levels and transparency modes."},
       {h: "Wireless Codec Comparison", p: "Bluetooth audio quality depends heavily on the codec used. SBC provides baseline quality, AAC excels on Apple devices, aptX Adaptive and LDAC offer near-lossless quality on compatible Android devices, and LC3 promises improvements with Bluetooth LE Audio. Understanding codec compatibility ensures you get the best possible wireless audio quality from your devices."},
@@ -201,7 +201,7 @@ function makeSections(topic: string): string[] {
       {h: "Comfort and Ergonomics", p: "The most technically impressive headphones are worthless if they're uncomfortable. Clamping force, ear pad material, headband pressure distribution, and overall weight all affect long-term comfort. Memory foam pads with breathable fabrics suit extended listening sessions, while lighter designs reduce fatigue during commutes and travel."},
       {h: "Amplification and DAC Considerations", p: "High-impedance headphones often benefit from dedicated amplification to reach their full potential. Portable DAC/amp combinations can dramatically improve sound quality from phones and laptops, offering cleaner power delivery and better digital-to-analog conversion. Understanding impedance and sensitivity ratings helps you determine whether additional amplification is necessary."},
     ],
-    "smart-home": [
+    "smarthome": [
       {h: "Protocol Compatibility and Interoperability", p: "The smart home landscape features multiple communication protocols — Wi-Fi, Bluetooth, Zigbee, Z-Wave, Thread, and the new Matter standard. Each has trade-offs in range, power consumption, bandwidth, and reliability. The best smart home setups use a combination of protocols, with a central hub bridging between them for seamless operation."},
       {h: "Smart Lighting Systems", p: "Smart lighting is often the entry point for home automation. Modern smart bulbs offer millions of colors, tunable white temperatures, and smooth dimming. Light strips add ambient accent lighting, while smart switches provide whole-room control. Scheduling, motion triggers, and scene automation transform static lighting into a dynamic, responsive system."},
       {h: "Home Security Integration", p: "Smart security encompasses cameras, doorbells, locks, sensors, and alarm systems that work together to protect your home. Modern systems offer AI-powered person detection, package alerts, facial recognition, and remote monitoring. Local processing options address privacy concerns while maintaining rapid response times and reducing cloud dependency."},
@@ -238,15 +238,15 @@ function makeList(topic: string): string {
       "<h2>Key Takeaways</h2><ul><li>Always test the phone's camera in various lighting conditions before purchasing</li><li>Consider the total cost of ownership, including accessories and insurance</li><li>Check software update commitments — longer support means better long-term value</li><li>Evaluate ecosystem lock-in before switching between Android and iOS</li><li>Read professional reviews that include real-world battery tests, not just spec sheets</li></ul>",
       "<h2>Common Mistakes to Avoid</h2><ul><li>Prioritizing megapixel count over sensor size and image processing quality</li><li>Ignoring the importance of software optimization for overall performance</li><li>Overlooking carrier compatibility and 5G band support</li><li>Choosing based on brand loyalty rather than current product merit</li><li>Forgetting to check trade-in values and promotional deals before purchasing</li></ul>",
     ],
-    "laptops-computers": [
+    "laptopspcs": [
       "<h2>Key Takeaways</h2><ul><li>Match the processor tier to your actual workload — over-specifying wastes money</li><li>Invest in a quality display since you'll look at it every day</li><li>16GB RAM is the new minimum for comfortable multitasking</li><li>Prioritize SSD speed over capacity — external storage is cheap, slow boot drives are not</li><li>Check the warranty terms and repair options before committing</li></ul>",
       "<h2>Common Mistakes to Avoid</h2><ul><li>Choosing a laptop based solely on processor model without considering thermal design</li><li>Ignoring port selection and relying on dongles for daily connectivity</li><li>Buying more storage than needed instead of investing in cloud solutions</li><li>Overlooking keyboard and trackpad quality during brief in-store testing</li><li>Neglecting to check compatibility with your existing peripherals and accessories</li></ul>",
     ],
-    "audio-gear": [
+    "audio": [
       "<h2>Key Takeaways</h2><ul><li>Sound preference is subjective — try before you buy when possible</li><li>ANC performance varies significantly between price tiers and brands</li><li>Wireless convenience often involves a trade-off with absolute sound quality</li><li>Proper fit and seal dramatically affect bass response and noise isolation</li><li>Consider your primary listening environment when choosing between open and closed designs</li></ul>",
       "<h2>Common Mistakes to Avoid</h2><ul><li>Judging headphones by frequency response numbers alone without listening</li><li>Ignoring the importance of a good source and amplification chain</li><li>Overlooking comfort during extended listening sessions</li><li>Assuming more expensive always means better for your specific use case</li><li>Neglecting to check codec compatibility with your primary devices</li></ul>",
     ],
-    "smart-home": [
+    "smarthome": [
       "<h2>Key Takeaways</h2><ul><li>Start with a clear plan for your smart home ecosystem before buying devices</li><li>Choose a primary platform (Alexa, Google, HomeKit) and verify compatibility</li><li>Invest in a reliable mesh Wi-Fi system as the foundation of your smart home</li><li>Local processing options improve reliability and protect your privacy</li><li>Automate gradually — complex routines are harder to troubleshoot</li></ul>",
       "<h2>Common Mistakes to Avoid</h2><ul><li>Buying devices from too many different ecosystems that don't communicate well</li><li>Ignoring network security when connecting dozens of IoT devices</li><li>Overcomplicating automations that family members can't easily override</li><li>Choosing Wi-Fi devices when low-power protocols like Zigbee would be more reliable</li><li>Forgetting to consider what happens when the internet goes down</li></ul>",
     ],
@@ -269,15 +269,15 @@ function makeQuote(topic: string): string {
       {q: "The best smartphone is the one that disappears into your life — it just works when you need it.", a: "Alex Chen, Senior Reviewer"},
       {q: "Camera quality has become the primary differentiator in the flagship smartphone market.", a: "Mike Russo, Tech Analyst"},
     ],
-    "laptops-computers": [
+    "laptopspcs": [
       {q: "A great laptop should enhance your creativity, not constrain it.", a: "David Kumar, Computing Expert"},
       {q: "The best productivity machine is one that stays out of your way.", a: "Mike Russo, Tech Analyst"},
     ],
-    "audio-gear": [
+    "audio": [
       {q: "Great audio reveals layers of music you never knew existed.", a: "Sarah Mitchell, Audio Specialist"},
       {q: "The right headphones don't just play music — they transport you inside it.", a: "Alex Chen, Senior Reviewer"},
     ],
-    "smart-home": [
+    "smarthome": [
       {q: "The best smart home is one where the technology fades into the background.", a: "Emma Wilson, Smart Home Expert"},
       {q: "Start simple, grow gradually, and always prioritize reliability over novelty.", a: "Mike Russo, Tech Analyst"},
     ],
@@ -298,9 +298,9 @@ function makeQuote(topic: string): string {
 function makeTable(topic: string): string {
   const tables: Record<string, string> = {
     smartphones: "<h2>Quick Comparison Table</h2><table><thead><tr><th>Feature</th><th>Budget ($200-400)</th><th>Mid-Range ($400-700)</th><th>Flagship ($700+)</th></tr></thead><tbody><tr><td>Display</td><td>LCD/OLED, 90Hz</td><td>OLED, 120Hz</td><td>LTPO OLED, 120Hz+</td></tr><tr><td>Camera</td><td>Dual lens, basic OIS</td><td>Triple lens, good OIS</td><td>Multi-lens, advanced OIS</td></tr><tr><td>Processor</td><td>Mid-tier Snapdragon/Dimensity</td><td>Upper mid-range</td><td>Flagship chipset</td></tr><tr><td>Battery</td><td>5000mAh, 25W</td><td>5000mAh, 45W</td><td>5000mAh, 65W+</td></tr><tr><td>Software Support</td><td>2 years</td><td>3-4 years</td><td>5-7 years</td></tr></tbody></table>",
-    "laptops-computers": "<h2>Quick Comparison Table</h2><table><thead><tr><th>Feature</th><th>Budget ($300-600)</th><th>Mid-Range ($600-1200)</th><th>Premium ($1200+)</th></tr></thead><tbody><tr><td>Processor</td><td>Intel i3/AMD Ryzen 3</td><td>i5/Ryzen 5/M2</td><td>i7-i9/Ryzen 7-9/M3 Pro</td></tr><tr><td>RAM</td><td>8GB DDR4</td><td>16GB DDR5</td><td>32GB+ DDR5/LPDDR5</td></tr><tr><td>Storage</td><td>256GB NVMe</td><td>512GB NVMe</td><td>1TB+ Gen4 NVMe</td></tr><tr><td>Display</td><td>FHD IPS</td><td>QHD IPS/OLED</td><td>QHD+ OLED/Mini-LED</td></tr><tr><td>Build</td><td>Plastic</td><td>Aluminum</td><td>CNC Aluminum/Titanium</td></tr></tbody></table>",
-    "audio-gear": "<h2>Quick Comparison Table</h2><table><thead><tr><th>Feature</th><th>Budget (Under $100)</th><th>Mid-Range ($100-300)</th><th>Premium ($300+)</th></tr></thead><tbody><tr><td>Driver Type</td><td>Dynamic</td><td>Dynamic/BA Hybrid</td><td>Planar Magnetic/Dynamic</td></tr><tr><td>ANC</td><td>Basic</td><td>Adaptive</td><td>Multi-mode, AI-enhanced</td></tr><tr><td>Codec Support</td><td>SBC, AAC</td><td>aptX, LDAC</td><td>All codecs + LC3</td></tr><tr><td>Battery</td><td>6-8 hours</td><td>8-12 hours</td><td>20-30+ hours</td></tr><tr><td>Build Quality</td><td>Plastic</td><td>Mixed materials</td><td>Premium metals/leather</td></tr></tbody></table>",
-    "smart-home": "<h2>Quick Comparison Table</h2><table><thead><tr><th>Category</th><th>Entry Level</th><th>Mid-Range</th><th>Premium</th></tr></thead><tbody><tr><td>Smart Speaker</td><td>Echo Dot/Nest Mini</td><td>Echo/HomePod Mini</td><td>HomePod/Sonos Era</td></tr><tr><td>Smart Thermostat</td><td>Basic Wi-Fi ($50-80)</td><td>Learning ($100-180)</td><td>Multi-zone ($200+)</td></tr><tr><td>Security Camera</td><td>1080p indoor ($30-50)</td><td>2K with AI ($80-150)</td><td>4K Pro ($200+)</td></tr><tr><td>Smart Lock</td><td>Keypad ($100-150)</td><td>Wi-Fi + biometric ($180-250)</td><td>Full integration ($300+)</td></tr><tr><td>Hub</td><td>Basic bridge ($30-50)</td><td>Multi-protocol ($80-130)</td><td>Pro hub with local ($150+)</td></tr></tbody></table>",
+    "laptopspcs": "<h2>Quick Comparison Table</h2><table><thead><tr><th>Feature</th><th>Budget ($300-600)</th><th>Mid-Range ($600-1200)</th><th>Premium ($1200+)</th></tr></thead><tbody><tr><td>Processor</td><td>Intel i3/AMD Ryzen 3</td><td>i5/Ryzen 5/M2</td><td>i7-i9/Ryzen 7-9/M3 Pro</td></tr><tr><td>RAM</td><td>8GB DDR4</td><td>16GB DDR5</td><td>32GB+ DDR5/LPDDR5</td></tr><tr><td>Storage</td><td>256GB NVMe</td><td>512GB NVMe</td><td>1TB+ Gen4 NVMe</td></tr><tr><td>Display</td><td>FHD IPS</td><td>QHD IPS/OLED</td><td>QHD+ OLED/Mini-LED</td></tr><tr><td>Build</td><td>Plastic</td><td>Aluminum</td><td>CNC Aluminum/Titanium</td></tr></tbody></table>",
+    "audio": "<h2>Quick Comparison Table</h2><table><thead><tr><th>Feature</th><th>Budget (Under $100)</th><th>Mid-Range ($100-300)</th><th>Premium ($300+)</th></tr></thead><tbody><tr><td>Driver Type</td><td>Dynamic</td><td>Dynamic/BA Hybrid</td><td>Planar Magnetic/Dynamic</td></tr><tr><td>ANC</td><td>Basic</td><td>Adaptive</td><td>Multi-mode, AI-enhanced</td></tr><tr><td>Codec Support</td><td>SBC, AAC</td><td>aptX, LDAC</td><td>All codecs + LC3</td></tr><tr><td>Battery</td><td>6-8 hours</td><td>8-12 hours</td><td>20-30+ hours</td></tr><tr><td>Build Quality</td><td>Plastic</td><td>Mixed materials</td><td>Premium metals/leather</td></tr></tbody></table>",
+    "smarthome": "<h2>Quick Comparison Table</h2><table><thead><tr><th>Category</th><th>Entry Level</th><th>Mid-Range</th><th>Premium</th></tr></thead><tbody><tr><td>Smart Speaker</td><td>Echo Dot/Nest Mini</td><td>Echo/HomePod Mini</td><td>HomePod/Sonos Era</td></tr><tr><td>Smart Thermostat</td><td>Basic Wi-Fi ($50-80)</td><td>Learning ($100-180)</td><td>Multi-zone ($200+)</td></tr><tr><td>Security Camera</td><td>1080p indoor ($30-50)</td><td>2K with AI ($80-150)</td><td>4K Pro ($200+)</td></tr><tr><td>Smart Lock</td><td>Keypad ($100-150)</td><td>Wi-Fi + biometric ($180-250)</td><td>Full integration ($300+)</td></tr><tr><td>Hub</td><td>Basic bridge ($30-50)</td><td>Multi-protocol ($80-130)</td><td>Pro hub with local ($150+)</td></tr></tbody></table>",
     wearables: "<h2>Quick Comparison Table</h2><table><thead><tr><th>Feature</th><th>Fitness Band ($30-80)</th><th>Smartwatch ($150-350)</th><th>Premium ($350+)</th></tr></thead><tbody><tr><td>Display</td><td>Monochrome OLED</td><td>Color AMOLED</td><td>LTPO AMOLED/Sapphire</td></tr><tr><td>GPS</td><td>Connected GPS</td><td>Built-in GPS</td><td>Dual-band GPS</td></tr><tr><td>Health Sensors</td><td>HR, SpO2</td><td>HR, SpO2, ECG, Temp</td><td>All + blood pressure</td></tr><tr><td>Battery</td><td>7-14 days</td><td>2-5 days</td><td>3-7 days / solar</td></tr><tr><td>Smart Features</td><td>Notifications only</td><td>Apps, payments, LTE</td><td>Full smartphone features</td></tr></tbody></table>",
     gaming: "<h2>Quick Comparison Table</h2><table><thead><tr><th>Feature</th><th>Budget Setup</th><th>Mid-Range</th><th>High-End</th></tr></thead><tbody><tr><td>GPU/Console</td><td>RTX 4060 / PS5</td><td>RTX 4070 / PS5 Pro</td><td>RTX 4090 / Custom PC</td></tr><tr><td>Monitor</td><td>1080p 144Hz IPS</td><td>1440p 165Hz IPS</td><td>4K OLED 240Hz</td></tr><tr><td>Keyboard</td><td>Membrane ($20-40)</td><td>Mechanical ($60-120)</td><td>Custom/Hot-swap ($150+)</td></tr><tr><td>Mouse</td><td>Basic optical ($15-30)</td><td>Gaming sensor ($40-80)</td><td>Pro wireless ($80-150)</td></tr><tr><td>Headset</td><td>Stereo ($30-50)</td><td>7.1 Surround ($60-120)</td><td>Wireless ANC ($150+)</td></tr></tbody></table>",
   };
@@ -313,15 +313,15 @@ function makeEnding(topic: string): string {
       "The smartphone you choose will be your most-used device for the next two to three years. Take your time, consider your priorities, and remember that the best phone isn't always the most expensive one — it's the one that best fits your lifestyle and needs.",
       "As technology continues to evolve, staying informed helps you make better purchasing decisions. Bookmark our smartphone section for the latest reviews, comparisons, and buying guides updated throughout the year.",
     ],
-    "laptops-computers": [
+    "laptopspcs": [
       "Investing in the right computer is one of the most impactful technology decisions you can make. Consider your workflow, prioritize the features that matter most to you, and remember that the best machine is one that enhances your productivity without getting in the way.",
       "The computing landscape will continue to evolve with new processors, form factors, and capabilities. Stay up to date with our latest reviews and guides to ensure your next purchase delivers lasting value.",
     ],
-    "audio-gear": [
+    "audio": [
       "Great audio is a deeply personal experience. What sounds perfect to one listener may not resonate with another. Trust your ears, try before you buy when possible, and remember that the best audio gear is the kind that lets you forget about the technology and simply enjoy the music.",
       "The audio industry continues to innovate at a remarkable pace. From new driver technologies to advances in wireless codecs, there's always something new on the horizon. Keep checking our audio section for the latest reviews and recommendations.",
     ],
-    "smart-home": [
+    "smarthome": [
       "Building a smart home is a journey, not a destination. Start with the basics, expand thoughtfully, and prioritize reliability and compatibility over flashy features. The best smart home is one that works seamlessly in the background, making your daily life easier without demanding constant attention.",
       "As the Matter standard matures and more manufacturers embrace interoperability, the smart home will only become more accessible and powerful. Follow our smart home guides for ongoing advice on building and expanding your connected home.",
     ],

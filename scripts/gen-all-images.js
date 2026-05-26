@@ -37,9 +37,9 @@ const authorPrompts = {
 // Topic prompts for article covers
 const topicPrompts = {
   'smartphones': 'smartphone device, mobile technology, modern phone on clean surface, professional product photography, editorial style, soft lighting',
-  'laptops-computers': 'laptop computer, modern workspace, clean desk setup, professional product photography, editorial style, soft lighting',
-  'audio-gear': 'headphones and audio equipment, premium earbuds, speaker setup, professional product photography, editorial style, studio lighting',
-  'smart-home': 'smart home devices, connected home technology, IoT gadgets, modern minimalist interior, professional editorial photography',
+  'laptopspcs': 'laptop computer, modern workspace, clean desk setup, professional product photography, editorial style, soft lighting',
+  'audio': 'headphones and audio equipment, premium earbuds, speaker setup, professional product photography, editorial style, studio lighting',
+  'smarthome': 'smart home devices, connected home technology, IoT gadgets, modern minimalist interior, professional editorial photography',
   'wearables': 'smartwatch and fitness tracker on wrist, wearable technology, health monitoring device, professional product photography, clean background',
   'gaming': 'gaming setup, gaming peripherals, RGB keyboard and mouse, gaming monitor, professional product photography, dramatic lighting',
 };
