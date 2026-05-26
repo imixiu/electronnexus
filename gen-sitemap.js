@@ -10,7 +10,7 @@ const OUT_DIR = `/root/vercel-projects/${SITE_DIR}/public/sitemap`;
 async function main() {
   const sql = neon(DB_URL);
 
-  const articles = await sql`SELECT type, short_title FROM articles WHERE site = ${SITE_NAME} ORDER BY id`;
+  const articles = await sql`SELECT type, short_title FROM articles WHERE site = ${SITE_NAME} AND is_online = 'Y' ORDER BY id`;
   const authors = await sql`SELECT slug FROM authors WHERE site = ${SITE_NAME} ORDER BY id`;
 
   const urls = [];
