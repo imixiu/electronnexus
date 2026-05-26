@@ -33,14 +33,22 @@ export async function getAllArticles(): Promise<ArticlePreview[]> {
   return rows.map(mapPreview);
 }
 
-export async function getArticlesByCategory(category: string): Promise<ArticlePreview[]> {
-  const rows = await query(
-    `SELECT id, short_title, site, type, title, description, img, author, published_time, tag, is_online
-     FROM articles WHERE site = $1 AND type = $2 AND is_online = 'Y'
-     ORDER BY published_time DESC`,
-    [SITE, category]
-  );
-  return rows.map(mapPreview);
+export async function getArticlesByCategory(category: string, page = 1, pageSize = 24): Promise<{ articles: ArticlePreview[]; total: number }> {
+  const offset = (page - 1) * pageSize;
+  const [rows, countRows] = await Promise.all([
+    query(
+      `SELECT id, short_title, site, type, title, description, img, author, published_time, tag, is_online
+       FROM articles WHERE site = $1 AND type = $2 AND is_online = 'Y'
+       ORDER BY published_time DESC LIMIT $3 OFFSET $4`,
+      [SITE, category, pageSize, offset]
+    ),
+    query(
+      `SELECT COUNT(*) as count FROM articles WHERE site = $1 AND type = $2 AND is_online = 'Y'`,
+      [SITE, category]
+    ),
+  ]);
+  const total = parseInt((countRows[0] as any).count, 10);
+  return { articles: rows.map(mapPreview), total };
 }
 
 export async function getArticle(category: string, slug: string): Promise<Article | null> {
