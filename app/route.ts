@@ -10,6 +10,9 @@ const TYPE_LABELS: Record<string, string> = {
   wearables: "Wearables",
   gaming: "Gaming & Entertainment",
   informational: "Guides & Tips",
+  comparative: "Comparisons",
+  commercial: "Buying Guides",
+  review: "Reviews",
 };
 
 function escapeHtml(s: string): string {
