@@ -2,6 +2,13 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
+  const host = request.headers.get("host") || "";
+  if (host.startsWith("www.")) {
+    const url = request.nextUrl.clone();
+    url.host = host.slice(4);
+    return NextResponse.redirect(url, 301);
+  }
+
   const { pathname, searchParams } = request.nextUrl;
   const pageParam = searchParams.get("page");
 
@@ -27,6 +34,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Match category pages only (not API routes, static files, etc.)
-  matcher: ["/smartphones/:path*", "/laptopspcs/:path*", "/audio/:path*", "/smarthome/:path*", "/wearables/:path*", "/gaming/:path*", "/more/:path*"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };

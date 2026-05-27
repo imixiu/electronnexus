@@ -18,10 +18,15 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const cat = siteConfig.categories.find((c) => c.key === category);
   if (!cat) return { title: "Category Not Found" };
   return {
-    title: `${cat.label} - ${siteConfig.title}`,
+    title: `${cat.label} | ElectronNexus`,
     description: cat.description,
     alternates: {
       canonical: `${siteConfig.url}/${category}`,
+    },
+    openGraph: {
+      title: `${cat.label} | ElectronNexus`,
+      description: cat.description,
+      images: [`${siteConfig.url}/og-default.jpg`],
     },
   };
 }
