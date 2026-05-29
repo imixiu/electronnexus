@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://electronnexus.com/sitemapindex.xml
+Sitemap: https://electronnexus.com/sitemap/sitemapindex.xml
