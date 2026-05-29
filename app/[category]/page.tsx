@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getArticlesByCategory } from "@/lib/queries";
 import { siteConfig } from "@/lib/site-config";
 import { ArticleCard } from "@/components/article/ArticleCard";
+import { CategoryJsonLd } from "@/components/article/CategoryJsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -26,6 +27,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     openGraph: {
       title: `${cat.label} | ElectronNexus`,
       description: cat.description,
+      url: `${siteConfig.url}/${category}`,
+      images: [`${siteConfig.url}/og-default.jpg`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${cat.label} | ElectronNexus`,
+      description: cat.description,
       images: [`${siteConfig.url}/og-default.jpg`],
     },
   };
@@ -41,6 +49,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className="category-page">
+      <CategoryJsonLd
+        siteUrl={siteConfig.url}
+        categoryKey={category}
+        categoryLabel={cat.label}
+        categoryDescription={cat.description}
+        articles={articles}
+        totalArticles={total}
+        currentPage={1}
+        totalPages={totalPages}
+      />
       <section className="category-banner">
         <h1>{cat.label}</h1>
         <p>{cat.description}</p>

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { getArticlesByCategory } from "@/lib/queries";
 import { siteConfig } from "@/lib/site-config";
 import { ArticleCard } from "@/components/article/ArticleCard";
+import { CategoryJsonLd } from "@/components/article/CategoryJsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -17,7 +18,6 @@ export async function generateMetadata({ params }: PagedCategoryProps): Promise<
   const { category, pageNum } = await params;
   const page = parseInt(pageNum, 10) || 0;
 
-  // Page 1 should redirect to /{category}
   if (page <= 1) {
     return { title: "Redirecting..." };
   }
@@ -30,10 +30,20 @@ export async function generateMetadata({ params }: PagedCategoryProps): Promise<
   if (page > totalPages) return { title: "Page Not Found" };
 
   return {
-    title: `${cat.label} - Page ${page} | ${siteConfig.title}`,
+    title: `${cat.label} — Page ${page} | ElectronNexus`,
     description: `Page ${page} of ${cat.label} articles - ${cat.description}`,
     alternates: {
       canonical: `${siteConfig.url}/${category}/page/${page}`,
+    },
+    openGraph: {
+      title: `${cat.label} — Page ${page} | ElectronNexus`,
+      description: `Page ${page} of ${cat.label} articles - ${cat.description}`,
+      url: `${siteConfig.url}/${category}/page/${page}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${cat.label} — Page ${page} | ElectronNexus`,
+      description: `Page ${page} of ${cat.label} articles - ${cat.description}`,
     },
   };
 }
@@ -42,7 +52,6 @@ export default async function PagedCategoryPage({ params }: PagedCategoryProps) 
   const { category, pageNum } = await params;
   const page = parseInt(pageNum, 10) || 0;
 
-  // Page 1 redirects to /{category}
   if (page <= 1) {
     redirect(`/${category}`);
   }
@@ -56,6 +65,16 @@ export default async function PagedCategoryPage({ params }: PagedCategoryProps) 
 
   return (
     <div className="category-page">
+      <CategoryJsonLd
+        siteUrl={siteConfig.url}
+        categoryKey={category}
+        categoryLabel={cat.label}
+        categoryDescription={cat.description}
+        articles={articles}
+        totalArticles={total}
+        currentPage={page}
+        totalPages={totalPages}
+      />
       <section className="category-banner">
         <h1>{cat.label} — Page {page}</h1>
         <p>{cat.description}</p>
