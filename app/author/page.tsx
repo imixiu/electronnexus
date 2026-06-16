@@ -1,3 +1,5 @@
+export const revalidate = 31536000;
+
 import { getAllAuthors } from "@/lib/queries";
 import { siteConfig } from "@/lib/site-config";
 import { AuthorCard } from "@/components/author/AuthorCard";

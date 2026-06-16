@@ -23,7 +23,7 @@ export function Footer() {
           <h4>Site</h4>
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/author">Our Authors</Link></li>
+            <li><Link href="/author/team">Our Authors</Link></li>
             <li><Link href="/author/team">About Us</Link></li>
           </ul>
         </nav>

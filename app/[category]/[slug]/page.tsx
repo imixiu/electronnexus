@@ -1,3 +1,5 @@
+export const revalidate = 31536000;
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getArticle, getRelatedArticles } from "@/lib/queries";
@@ -90,7 +92,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <ArticleBody body={article.body} />
             <div className="author-section-card">
               <div className="author-avatar">
-                {article.author ? article.author.charAt(0).toUpperCase() : "?"}
+                {article.authorImg ? (
+                  <img src={article.authorImg} alt={article.author || "Author"} width={50} height={50} />
+                ) : (
+                  article.author ? article.author.charAt(0).toUpperCase() : "?"
+                )}
               </div>
               <div className="author-info">
                 <h3>{article.author || `${siteConfig.name} Team`}</h3>

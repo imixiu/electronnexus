@@ -1,3 +1,5 @@
+export const revalidate = 31536000;
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAuthorBySlug, getArticlesByAuthor } from "@/lib/queries";

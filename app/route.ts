@@ -109,7 +109,8 @@ export async function GET() {
     await pool.end();
 
     const rows = result.rows;
-    if (rows.length < 2) return new Response(html, { status: 200, headers: { "Content-Type": "text/html; charset=utf-8" } });
+    if (rows.length < 2) return new Response(html, { status: 200, headers: { "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "public, s-maxage=31536000" } });
 
     // Distribute articles across sections
     const featuredMain = rows[0]; // 1 article
@@ -144,6 +145,7 @@ export async function GET() {
 
   return new Response(html, {
     status: 200,
-    headers: { "Content-Type": "text/html; charset=utf-8" },
+    headers: { "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "public, s-maxage=31536000" },
   });
 }
