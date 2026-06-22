@@ -1,0 +1,497 @@
+// Auto-generated: inline index.html for Cloudflare Workers
+export const INDEX_HTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95PY8PSZ0Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95PY8PSZ0Y');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElectronNexus - Your Guide to Consumer Electronics</title>
+<meta name="description" content="Expert reviews, buying guides, and the latest news on smartphones, laptops, audio gear, smart home devices, wearables, and gaming tech.">
+<link rel="canonical" href="https://electronnexus.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ElectronNexus - Your Guide to Consumer Electronics">
+<meta property="og:description" content="Expert reviews, buying guides, and the latest news on smartphones, laptops, audio gear, smart home devices, wearables, and gaming tech.">
+<meta property="og:url" content="https://electronnexus.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://s.alicdn.com/@sc02/kf/Ac6943c0ca584498eb9bbe73d52f6667fw.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://electronnexus.com/">
+<meta name="twitter:image" content="https://s.alicdn.com/@sc02/kf/Ac6943c0ca584498eb9bbe73d52f6667fw.jpg">
+<meta name="twitter:title" content="ElectronNexus - Your Guide to Consumer Electronics">
+<meta name="twitter:description" content="Expert reviews, buying guides, and the latest news on consumer electronics.">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#6366f1;--primary-dark:#4f46e5;--secondary:#8b5cf6;--accent:#06b6d4;--bg:#0f172a;--bg-card:#1e293b;--bg-surface:#334155;--text:#f8fafc;--text-muted:#94a3b8;--text-dim:#64748b;--border:#334155;--radius:12px;--shadow:0 4px 24px rgba(0,0,0,0.3)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--primary)}
+img{max-width:100%;height:auto}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* HEADER */
+.site-header{background:rgba(15,23,42,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1200px;margin:0 auto}
+.logo{font-size:24px;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo span{font-weight:400;opacity:.7}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--text-muted);font-size:14px;font-weight:500;padding:6px 12px;border-radius:6px;transition:all .2s}
+.nav-links a:hover{color:var(--text);background:var(--bg-card)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);padding:80px 0;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(99,102,241,.15),transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(6,182,212,.1),transparent 70%);border-radius:50%}
+.hero-content{position:relative;z-index:2;max-width:700px}
+.hero h1{font-size:48px;font-weight:800;line-height:1.2;margin-bottom:20px}
+.hero h1 .gradient{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:18px;color:var(--text-muted);margin-bottom:32px;max-width:560px}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--bg-card);border:1px solid var(--border);padding:8px 16px;border-radius:20px;font-size:13px;color:var(--text-muted)}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+
+/* CATEGORIES */
+.categories{padding:60px 0}
+.section-header{text-align:center;margin-bottom:48px}
+.section-header h2{font-size:32px;font-weight:700;margin-bottom:12px}
+.section-header p{color:var(--text-muted);font-size:16px;max-width:500px;margin:0 auto}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.cat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:all .3s;cursor:pointer}
+.cat-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 8px 32px rgba(99,102,241,.15)}
+.cat-icon{font-size:36px;margin-bottom:12px}
+.cat-card h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.cat-card p{font-size:13px;color:var(--text-muted);line-height:1.5}
+.cat-card a{color:var(--text);text-decoration:none}
+.cat-card a:hover{color:var(--accent)}
+
+/* FEATURED */
+.featured{padding:60px 0;background:var(--bg-card)}
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.featured-main{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .3s}
+.featured-main:hover{transform:translateY(-2px)}
+.featured-main .content{padding:24px}
+.featured-main .tag{display:inline-block;background:rgba(99,102,241,.15);color:var(--primary);padding:4px 12px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:12px}
+.featured-main h3{font-size:22px;font-weight:700;margin-bottom:10px;line-height:1.3}
+.featured-main p{color:var(--text-muted);font-size:14px;line-height:1.6}
+.featured-side{display:flex;flex-direction:column;gap:16px}
+.featured-item{display:flex;gap:16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px;transition:border-color .2s;text-decoration:none;color:inherit}
+.featured-item:hover{border-color:var(--accent)}
+.featured-main .img-placeholder{height:280px;background:linear-gradient(135deg,#1e1b4b,#312e81);display:flex;align-items:center;justify-content:center;font-size:64px;background-size:cover;background-position:center}
+.featured-main h3 a{color:var(--text);text-decoration:none}
+.featured-main h3 a:hover{color:var(--accent)}
+.featured-item .num{font-size:28px;font-weight:800;color:var(--primary);min-width:36px}
+.featured-item .info h4{font-size:15px;font-weight:600;margin-bottom:4px;line-height:1.4}
+.featured-item .info p{font-size:12px;color:var(--text-dim)}
+
+/* LATEST */
+.latest{padding:60px 0}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.article-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .3s}
+.article-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.article-card .card-img{height:180px;background:linear-gradient(135deg,#1e1b4b,#312e81);display:flex;align-items:center;justify-content:center;font-size:48px;background-size:cover;background-position:center}
+.article-card .card-body{padding:20px}
+.article-card .card-type{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:8px}
+.article-card h3{font-size:17px;font-weight:600;margin-bottom:8px;line-height:1.4}
+.article-card h3 a{color:var(--text)}
+.article-card h3 a:hover{color:var(--accent)}
+.article-card .card-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-dim);margin-top:12px}
+.article-card .card-meta .author{color:var(--text-muted);font-weight:500}
+
+/* EXPERT REVIEWS */
+.reviews{padding:60px 0;background:var(--bg-card)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.review-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:border-color .3s}
+.review-card:hover{border-color:var(--secondary)}
+.review-card .stars{color:#fbbf24;font-size:16px;margin-bottom:10px}
+.review-card h3{font-size:17px;font-weight:600;margin-bottom:8px}
+.review-card p{font-size:14px;color:var(--text-muted);line-height:1.6}
+.review-card .verdict{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:13px;color:var(--accent);font-weight:600}
+
+/* TRENDING */
+.trending{padding:60px 0}
+.trending-list{display:flex;flex-direction:column;gap:16px;max-width:800px;margin:0 auto}
+.trending-item{display:flex;align-items:center;gap:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;transition:all .2s;text-decoration:none;color:inherit}
+.trending-item:hover{border-color:var(--primary);transform:translateX(4px)}
+.trending-rank{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;min-width:48px}
+.trending-info h4{font-size:16px;font-weight:600;margin-bottom:4px}
+.trending-info p{font-size:13px;color:var(--text-dim)}
+.trending-info .cat{color:var(--accent);font-size:12px;font-weight:600}
+
+/* NEWSLETTER */
+.newsletter{padding:80px 0;background:linear-gradient(135deg,#1e1b4b,#0f172a);text-align:center}
+.newsletter h2{font-size:32px;font-weight:700;margin-bottom:12px}
+.newsletter p{color:var(--text-muted);font-size:16px;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.newsletter-form{display:flex;gap:12px;max-width:460px;margin:0 auto}
+.newsletter-form input{flex:1;padding:14px 20px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text);font-size:15px;outline:none;transition:border-color .2s}
+.newsletter-form input:focus{border-color:var(--primary)}
+.newsletter-form button{padding:14px 28px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:opacity .2s}
+.newsletter-form button:hover{opacity:.9}
+
+/* TRUST */
+.trust{padding:60px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.trust-item{text-align:center;padding:32px 20px}
+.trust-item .icon{font-size:40px;margin-bottom:16px}
+.trust-item h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.trust-item p{font-size:14px;color:var(--text-muted);line-height:1.6}
+.trust-stats{display:flex;justify-content:center;gap:60px;margin-top:40px;padding-top:40px;border-top:1px solid var(--border)}
+.trust-stat{text-align:center}
+.trust-stat .num{font-size:36px;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.trust-stat .label{font-size:13px;color:var(--text-muted);margin-top:4px}
+
+/* FOOTER */
+.site-footer{background:var(--bg-card);border-top:1px solid var(--border);padding:48px 0 24px}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo{margin-bottom:12px;display:inline-block}
+.footer-brand p{font-size:14px;color:var(--text-muted);line-height:1.6}
+.footer-col h4{font-size:14px;font-weight:600;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;color:var(--text)}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:8px}
+.footer-col a{color:var(--text-muted);font-size:14px}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{text-align:center;padding-top:24px;border-top:1px solid var(--border);font-size:13px;color:var(--text-dim)}
+
+@media(max-width:768px){
+.hero h1{font-size:32px}
+.featured-grid{grid-template-columns:1fr}
+.footer-inner{grid-template-columns:1fr 1fr}
+.newsletter-form{flex-direction:column}
+.trust-stats{flex-direction:column;gap:24px}
+.nav-links{display:none}
+}
+</style>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js" data-speed="4"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+<div class="header-inner">
+<a href="/" class="logo">Electron<span>Nexus</span></a>
+<ul class="nav-links">
+<li><a href="/smartphones">Smartphones</a></li>
+<li><a href="/laptopspcs">Laptops</a></li>
+<li><a href="/audio">Audio</a></li>
+<li><a href="/smarthome">Smart Home</a></li>
+<li><a href="/wearables">Wearables</a></li>
+<li><a href="/gaming">Gaming</a></li>
+<li><a href="/more">More</a></li>
+<li><a href="/">Authors</a></li>
+</ul>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<h1>Navigate the <span class="gradient">Future of Tech</span></h1>
+<p>Expert reviews, in-depth comparisons, and buying guides for every tech enthusiast. From flagship smartphones to smart home ecosystems — we help you make informed decisions.</p>
+<div class="hero-badges">
+<span class="hero-badge"><span class="dot"></span> 1000+ Reviews Published</span>
+<span class="hero-badge"><span class="dot"></span> 8 Expert Reviewers</span>
+<span class="hero-badge"><span class="dot"></span> Updated Daily</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+<div class="container">
+<div class="section-header">
+<h2>Explore by Category</h2>
+<p>Find the perfect tech for your lifestyle across our six expertly curated categories</p>
+</div>
+<div class="cat-grid">
+<div class="cat-card"><a href="/smartphones"><div class="cat-icon">📱</div><h3>Smartphones</h3><p>Flagships, mid-range, and budget picks</p></a></div>
+<div class="cat-card"><a href="/laptopspcs"><div class="cat-icon">💻</div><h3>Laptops & PCs</h3><p>Workstations, ultrabooks, and desktops</p></a></div>
+<div class="cat-card"><a href="/audio"><div class="cat-icon">🎧</div><h3>Audio Gear</h3><p>Headphones, earbuds, and speakers</p></a></div>
+<div class="cat-card"><a href="/smarthome"><div class="cat-icon">🏠</div><h3>Smart Home</h3><p>IoT devices and home automation</p></a></div>
+<div class="cat-card"><a href="/wearables"><div class="cat-icon">⌚</div><h3>Wearables</h3><p>Smartwatches and fitness trackers</p></a></div>
+<div class="cat-card"><a href="/gaming"><div class="cat-icon">🎮</div><h3>Gaming</h3><p>Consoles, peripherals, and monitors</p></a></div>
+<div class="cat-card"><a href="/more"><div class="cat-icon">🔌</div><h3>More</h3><p>TVs, cameras, drones, and more electronics</p></a></div>
+</div>
+</div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured">
+<div class="container">
+<div class="section-header">
+<h2>Featured Stories</h2>
+<p>Hand-picked articles from our editorial team</p>
+</div>
+<div class="featured-grid">
+<div class="featured-main">
+<a href="/smartphones"><div class="img-placeholder">📱</div></a>
+<div class="content">
+<span class="tag">Smartphones</span>
+<h3>The Ultimate Smartphone Buying Guide for 2025</h3>
+<p>From camera quality to battery life, processor performance to display technology — everything you need to know before your next phone upgrade.</p>
+</div>
+</div>
+<div class="featured-side">
+<div class="featured-item"><div class="num">01</div><div class="info"><h4>Best Noise-Canceling Headphones Under $300</h4><p>Sarah Mitchell · Audio Gear</p></div></div>
+<div class="featured-item"><div class="num">02</div><div class="info"><h4>Building the Perfect Smart Home on a Budget</h4><p>Emma Wilson · Smart Home</p></div></div>
+<div class="featured-item"><div class="num">03</div><div class="info"><h4>Top 10 Gaming Monitors for Competitive Play</h4><p>James Park · Gaming</p></div></div>
+<div class="featured-item"><div class="num">04</div><div class="info"><h4>Apple Watch vs Galaxy Watch: 2025 Comparison</h4><p>Lisa Tanaka · Wearables</p></div></div>
+<div class="featured-item"><div class="num">05</div><div class="info"><h4>Best Laptops for Remote Workers in 2025</h4><p>David Kumar · Laptops</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- LATEST ARTICLES -->
+<section class="latest">
+<div class="container">
+<div class="section-header">
+<h2>Latest Articles</h2>
+<p>Fresh content from our team of tech experts</p>
+</div>
+<div class="articles-grid">
+<div class="article-card">
+<div class="card-img">📱</div>
+<div class="card-body">
+<div class="card-type">Smartphones</div>
+<h3><a href="/smartphones">Why the iPhone 16 Pro Max Camera System Sets a New Standard</a></h3>
+<div class="card-meta"><span class="author">Alex Chen</span><span>·</span><span>8 min read</span></div>
+</div>
+</div>
+<div class="article-card">
+<div class="card-img">💻</div>
+<div class="card-body">
+<div class="card-type">Laptops & Computers</div>
+<h3><a href="/laptopspcs">MacBook Air M4 vs ThinkPad X1 Carbon: The Productivity Showdown</a></h3>
+<div class="card-meta"><span class="author">David Kumar</span><span>·</span><span>12 min read</span></div>
+</div>
+</div>
+<div class="article-card">
+<div class="card-img">🎧</div>
+<div class="card-body">
+<div class="card-type">Audio & Headphones</div>
+<h3><a href="/audio">Sony WH-1000XM6 Review: Still the King of ANC?</a></h3>
+<div class="card-meta"><span class="author">Sarah Mitchell</span><span>·</span><span>10 min read</span></div>
+</div>
+</div>
+<div class="article-card">
+<div class="card-img">🏠</div>
+<div class="card-body">
+<div class="card-type">Smart Home</div>
+<h3><a href="/smarthome">Matter Protocol: What It Means for Your Smart Home in 2025</a></h3>
+<div class="card-meta"><span class="author">Emma Wilson</span><span>·</span><span>7 min read</span></div>
+</div>
+</div>
+<div class="article-card">
+<div class="card-img">⌚</div>
+<div class="card-body">
+<div class="card-type">Wearables</div>
+<h3><a href="/wearables">Best Fitness Trackers for Marathon Training: Data That Matters</a></h3>
+<div class="card-meta"><span class="author">Lisa Tanaka</span><span>·</span><span>9 min read</span></div>
+</div>
+</div>
+<div class="article-card">
+<div class="card-img">🎮</div>
+<div class="card-body">
+<div class="card-type">Gaming & Entertainment</div>
+<h3><a href="/gaming">PS5 Pro vs Xbox Series X: Which Console Wins in 2025?</a></h3>
+<div class="card-meta"><span class="author">James Park</span><span>·</span><span>11 min read</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EXPERT REVIEWS -->
+<section class="reviews">
+<div class="container">
+<div class="section-header">
+<h2>Expert Reviews</h2>
+<p>Thoroughly tested products with honest, unbiased verdicts</p>
+</div>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<h3>Samsung Galaxy S25 Ultra</h3>
+<p>The most complete flagship package of 2025. Outstanding camera versatility, S Pen productivity, and all-day battery life make this the phone to beat.</p>
+<div class="verdict">Verdict: Editor's Choice — 9.4/10</div>
+</div>
+<div class="review-card">
+<div class="stars">★★★★☆</div>
+<h3>AirPods Pro 3</h3>
+<p>Apple's latest earbuds deliver industry-leading noise cancellation and seamless ecosystem integration. Sound quality sees a notable improvement.</p>
+<div class="verdict">Verdict: Highly Recommended — 9.0/10</div>
+</div>
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<h3>ASUS ROG Swift OLED PG27AQDP</h3>
+<p>A stunning 1440p OLED gaming monitor with 360Hz refresh rate. Colors are vivid, response times are instant, and HDR performance is remarkable.</p>
+<div class="verdict">Verdict: Editor's Choice — 9.5/10</div>
+</div>
+<div class="review-card">
+<div class="stars">★★★★☆</div>
+<h3>Google Nest Hub Max 2</h3>
+<p>The best smart display for Google ecosystem users. Excellent video calling, smart home control, and a camera that actually respects privacy.</p>
+<div class="verdict">Verdict: Recommended — 8.5/10</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRENDING -->
+<section class="trending">
+<div class="container">
+<div class="section-header">
+<h2>Trending Now</h2>
+<p>What our readers are reading this week</p>
+</div>
+<div class="trending-list">
+<div class="trending-item">
+<div class="trending-rank">01</div>
+<div class="trending-info">
+<span class="cat">Smartphones</span>
+<h4>Pixel 10 Pro vs iPhone 16 Pro: Camera Comparison Deep Dive</h4>
+<p>Alex Chen · 15 min read</p>
+</div>
+</div>
+<div class="trending-item">
+<div class="trending-rank">02</div>
+<div class="trending-info">
+<span class="cat">Laptops</span>
+<h4>The Best Budget Laptops Under $500 for Students</h4>
+<p>David Kumar · 10 min read</p>
+</div>
+</div>
+<div class="trending-item">
+<div class="trending-rank">03</div>
+<div class="trending-info">
+<span class="cat">Audio</span>
+<h4>Open-Back vs Closed-Back Headphones: Which Should You Buy?</h4>
+<p>Sarah Mitchell · 8 min read</p>
+</div>
+</div>
+<div class="trending-item">
+<div class="trending-rank">04</div>
+<div class="trending-info">
+<span class="cat">Smart Home</span>
+<h4>5 Smart Locks That Actually Keep Your Home Secure</h4>
+<p>Emma Wilson · 12 min read</p>
+</div>
+</div>
+<div class="trending-item">
+<div class="trending-rank">05</div>
+<div class="trending-info">
+<span class="cat">Gaming</span>
+<h4>Nintendo Switch 2: Everything We Know So Far</h4>
+<p>James Park · 6 min read</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+<div class="container">
+<h2>Stay Ahead of the Curve</h2>
+<p>Get weekly tech insights, exclusive deals, and expert reviews delivered straight to your inbox.</p>
+<form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓'">
+<input type="email" placeholder="Enter your email address" required>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+
+<!-- TRUST / ABOUT -->
+<section class="trust">
+<div class="container">
+<div class="section-header">
+<h2>Why Trust ElectronNexus</h2>
+<p>Our commitment to honest, thorough tech journalism</p>
+</div>
+<div class="trust-grid">
+<div class="trust-item">
+<div class="icon">🔬</div>
+<h3>Hands-On Testing</h3>
+<p>Every product we review is physically tested by our team. We never base reviews on spec sheets alone.</p>
+</div>
+<div class="trust-item">
+<div class="icon">🎯</div>
+<h3>Unbiased Opinions</h3>
+<p>We buy our own review units and accept no payment for positive coverage. Our loyalty is to our readers.</p>
+</div>
+<div class="trust-item">
+<div class="icon">👥</div>
+<h3>Expert Team</h3>
+<p>Our reviewers have decades of combined experience in consumer electronics journalism and engineering.</p>
+</div>
+<div class="trust-item">
+<div class="icon">🔄</div>
+<h3>Continuously Updated</h3>
+<p>We revisit our recommendations regularly to ensure our guides reflect the latest market changes.</p>
+</div>
+</div>
+<div class="trust-stats">
+<div class="trust-stat"><div class="num">1000+</div><div class="label">Articles Published</div></div>
+<div class="trust-stat"><div class="num">8</div><div class="label">Expert Authors</div></div>
+<div class="trust-stat"><div class="num">6</div><div class="label">Tech Categories</div></div>
+<div class="trust-stat"><div class="num">500K+</div><div class="label">Monthly Readers</div></div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="container">
+<div class="footer-inner">
+<div class="footer-brand">
+<a href="/" class="logo">Electron<span>Nexus</span></a>
+<p>Your trusted source for consumer electronics reviews, buying guides, and tech news. Navigate the future of technology with confidence.</p>
+</div>
+<div class="footer-col">
+<h4>Categories</h4>
+<ul>
+<li><a href="/smartphones">Smartphones</a></li>
+<li><a href="/laptopspcs">Laptops & PCs</a></li>
+<li><a href="/audio">Audio Gear</a></li>
+<li><a href="/smarthome">Smart Home</a></li>
+<li><a href="/wearables">Wearables</a></li>
+<li><a href="/gaming">Gaming</a></li>
+<li><a href="/more">More Electronics</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<ul>
+<li><a href="/">Our Authors</a></li>
+<li><a href="//team">About Us</a></li>
+<li><a href="/">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="//team">Privacy Policy</a></li>
+<li><a href="//team">Terms of Service</a></li>
+<li><a href="//team">Editorial Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 ElectronNexus. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>`;

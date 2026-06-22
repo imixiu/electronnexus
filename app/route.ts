@@ -1,6 +1,5 @@
-import { readFile } from "fs/promises";
-import path from "path";
-import { Pool } from "pg";
+import { INDEX_HTML } from "../lib/index-html";
+import { neon } from "@neondatabase/serverless";
 
 const TYPE_LABELS: Record<string, string> = {
   smartphones: "Smartphones",
@@ -95,49 +94,44 @@ function buildTrending(articles: any[]): string {
 }
 
 export async function GET() {
-  const filePath = path.join(process.cwd(), "public", "index.html");
-  let html = await readFile(filePath, "utf-8");
+  let html = INDEX_HTML;
 
   try {
-    const pool = new Pool({
-      connectionString: process.env.DATABASE_URL || process.env.POSTGRES_URL,
-      ssl: { rejectUnauthorized: false },
-    });
-    const result = await pool.query(
-      "SELECT short_title, title, type, img, author, description FROM articles WHERE site='electronnexus' AND is_online='Y' ORDER BY published_time DESC NULLS LAST, id DESC LIMIT 18"
-    );
-    await pool.end();
-
-    const rows = result.rows;
-    if (rows.length < 2) return new Response(html, { status: 200, headers: { "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "public, s-maxage=31536000" } });
-
-    // Distribute articles across sections
-    const featuredMain = rows[0]; // 1 article
-    const featuredSide = rows.slice(1, 6); // 5 articles
-    const latestCards = rows.slice(6, 12); // 6 articles
-    const trending = rows.slice(12, 17); // 5 articles (if available)
-
-    // --- Featured Stories ---
-    html = html.replace(
-      /(<div class="featured-grid">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- LATEST)/,
-      (_match, p1) => `${p1}\n${buildFeaturedMain(featuredMain)}\n<div class="featured-side">\n${buildFeaturedSide(featuredSide)}\n</div>\n</div>\n</div>\n</section>\n\n<!-- LATEST`
-    );
-
-    // --- Latest Articles ---
-    if (latestCards.length > 0) {
-      html = html.replace(
-        /(<div class="articles-grid">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- EXPERT REVIEWS)/,
-        (_match, p1) => `${p1}\n${buildArticleCards(latestCards)}\n</div>\n</div>\n</section>\n\n<!-- EXPERT REVIEWS`
+    const dbUrl = (process.env.DATABASE_URL || process.env.POSTGRES_URL || "").replace("-pooler", "");
+    if (dbUrl) {
+      const sql = neon(dbUrl);
+      const rows = await sql(
+        "SELECT short_title, title, type, img, author, description FROM articles WHERE site='electronnexus' AND is_online='Y' ORDER BY published_time DESC NULLS LAST, id DESC LIMIT 18"
       );
-    }
 
-    // --- Trending Now ---
-    if (trending.length > 0) {
-      html = html.replace(
-        /(<div class="trending-list">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- NEWSLETTER)/,
-        (_match, p1) => `${p1}\n${buildTrending(trending)}\n</div>\n</div>\n</section>\n\n<!-- NEWSLETTER`
-      );
+      if (rows.length >= 2) {
+        const featuredMain = rows[0];
+        const featuredSide = rows.slice(1, 6);
+        const latestCards = rows.slice(6, 12);
+        const trending = rows.slice(12, 17);
+
+        // --- Featured Stories ---
+        html = html.replace(
+          /(<div class="featured-grid">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- LATEST)/,
+          (_match, p1) => `${p1}\n${buildFeaturedMain(featuredMain)}\n<div class="featured-side">\n${buildFeaturedSide(featuredSide)}\n</div>\n</div>\n</div>\n</section>\n\n<!-- LATEST`
+        );
+
+        // --- Latest Articles ---
+        if (latestCards.length > 0) {
+          html = html.replace(
+            /(<div class="articles-grid">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- EXPERT REVIEWS)/,
+            (_match, p1) => `${p1}\n${buildArticleCards(latestCards)}\n</div>\n</div>\n</section>\n\n<!-- EXPERT REVIEWS`
+          );
+        }
+
+        // --- Trending Now ---
+        if (trending.length > 0) {
+          html = html.replace(
+            /(<div class="trending-list">)[\s\S]*?(<\/div>\s*<\/div>\s*<\/section>\s*<!-- NEWSLETTER)/,
+            (_match, p1) => `${p1}\n${buildTrending(trending)}\n</div>\n</div>\n</section>\n\n<!-- NEWSLETTER`
+          );
+        }
+      }
     }
   } catch (e) {
     console.error("Failed to fetch articles:", e);
@@ -145,7 +139,9 @@ export async function GET() {
 
   return new Response(html, {
     status: 200,
-    headers: { "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "public, s-maxage=31536000" },
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "public, s-maxage=31536000",
+    },
   });
 }
