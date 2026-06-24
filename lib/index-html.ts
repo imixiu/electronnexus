@@ -3,12 +3,12 @@ export const INDEX_HTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-95PY8PSZ0Y"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CMPWQQBGB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-95PY8PSZ0Y');
+  gtag('config', 'G-2CMPWQQBGB');
 </script>
 
 <meta charset="UTF-8">
@@ -169,8 +169,8 @@ img{max-width:100%;height:auto}
 .nav-links{display:none}
 }
 </style>
-<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
-<script defer src="/_vercel/insights/script.js" data-speed="4"></script>
+
+
 </head>
 <body>
 
