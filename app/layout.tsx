@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -57,7 +56,7 @@ export default function RootLayout({
       </head>
       <body>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-95PY8PSZ0Y"
+          src="https://www.googletagmanager.com/gtag/js?id=G-2CMPWQQBGB"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -65,14 +64,13 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-95PY8PSZ0Y');
+            gtag('config', 'G-2CMPWQQBGB');
           `}
         </Script>
         
         <Header />
         <main>{children}</main>
         <Footer />
-        <Analytics />
       </body>
     </html>
   );
