@@ -39,10 +39,10 @@ const cacheHelpers = `
                     const key = new Request(url, { method: "GET", headers: {} });
                     const h = new Headers(resp.headers);
                     h.delete("vary");
-                    h.set("cache-control", "public, max-age=31536000, s-maxage=31536000");
+                    h.set("cache-control", "public, max-age=315360000, s-maxage=315360000");
                     await caches.default.put(key, new Response(body, { status: 200, headers: h }));
                     const rh = new Headers(resp.headers);
-                    rh.set("cache-control", "public, max-age=31536000, s-maxage=31536000");
+                    rh.set("cache-control", "public, max-age=315360000, s-maxage=315360000");
                     rh.set("x-cache", "MISS");
                     return new Response(body, { status: 200, headers: rh });
                 } catch(e) {

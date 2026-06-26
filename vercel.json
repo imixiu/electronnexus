@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.electronnexus.com" }],
+      "destination": "https://electronnexus.com/$1",
+      "permanent": true
+    }
+  ]
+}
