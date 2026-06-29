@@ -1,5 +1,5 @@
 import { INDEX_HTML } from "../lib/index-html";
-import { neon } from "@neondatabase/serverless";
+import { query } from "../lib/db";
 
 const TYPE_LABELS: Record<string, string> = {
   smartphones: "Smartphones",
@@ -97,12 +97,9 @@ export async function GET() {
   let html = INDEX_HTML;
 
   try {
-    const dbUrl = (process.env.DATABASE_URL || process.env.POSTGRES_URL || "").replace("-pooler", "");
-    if (dbUrl) {
-      const sql = neon(dbUrl);
-      const rows = await sql(
-        "SELECT short_title, title, type, img, author, description FROM articles WHERE site='electronnexus' AND is_online='Y' ORDER BY published_time DESC NULLS LAST, id DESC LIMIT 18"
-      );
+    const rows = await query(
+        "SELECT short_title, title, type, img, author, description FROM articles WHERE site='electronnexus' AND is_online='Y' ORDER BY published_time IS NULL, published_time DESC, id DESC LIMIT 18"
+      ) as any[];
 
       if (rows.length >= 2) {
         const featuredMain = rows[0];
@@ -132,7 +129,6 @@ export async function GET() {
           );
         }
       }
-    }
   } catch (e) {
     console.error("Failed to fetch articles:", e);
   }
