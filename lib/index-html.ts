@@ -12,7 +12,8 @@ export const INDEX_HTML = `<!DOCTYPE html>
 </script>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/icon.png?v=2" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ElectronNexus - Your Guide to Consumer Electronics</title>
 <meta name="description" content="Expert reviews, buying guides, and the latest news on smartphones, laptops, audio gear, smart home devices, wearables, and gaming tech.">
 <link rel="canonical" href="https://electronnexus.com/">
