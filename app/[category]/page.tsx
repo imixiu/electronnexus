@@ -63,7 +63,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       />
       <section className="category-banner">
         <h1>{cat.label}</h1>
-        <p>{cat.description}</p>
+        <p className="category-intro">{cat.bannerIntro}</p>
         <span className="article-count">{total} articles</span>
       </section>
       <section className="article-grid">

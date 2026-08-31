@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { RecommendedProducts } from "@/components/layout/RecommendedProducts";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   alternates: {
     canonical: siteConfig.url,
+  },
+  verification: {
+    other: { "msvalidate.01": "C396E9907374E29FB46754412E4E3FB7" },
   },
   openGraph: {
     title: "ElectronNexus | Your Guide to Consumer Electronics",
@@ -70,6 +74,7 @@ export default function RootLayout({
         </Script>
         
         <Header />
+        <RecommendedProducts />
         <main>{children}</main>
         <Footer />
       </body>

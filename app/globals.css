@@ -79,6 +79,27 @@ a:hover {
   background: var(--bg-card);
 }
 
+/* Recommended Products */
+.recommended-products {
+  background: var(--bg);
+  padding: 0;
+}
+.recommended-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.recommended-title {
+  display: none;
+}
+.recommended-iframe {
+  width: 100%;
+  height: 50vh;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+}
+
 /* Footer */
 .site-footer {
   background: var(--bg-card);
@@ -181,6 +202,15 @@ a:hover {
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
+}
+
+.category-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-muted, #57534e);
+  max-width: 720px;
+  margin: 0.75rem 0 0;
+  text-align: left;
 }
 
 /* Article Grid */
@@ -740,6 +770,10 @@ a:hover {
   }
   .category-banner h1 {
     font-size: 1.5rem;
+  }
+  .category-intro {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 }
 

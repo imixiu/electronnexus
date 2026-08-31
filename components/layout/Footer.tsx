@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
   return (
+    <>
     <footer className="site-footer">
       <div className="footer-content">
         <div className="footer-brand">
@@ -22,9 +23,7 @@ export function Footer() {
         <nav className="footer-nav">
           <h4>Site</h4>
           <ul>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/author/team">Our Authors</Link></li>
-            <li><Link href="/author/team">About Us</Link></li>
+            <li><Link href="/author">Our Authors</Link></li>
           </ul>
         </nav>
       </div>
@@ -32,5 +31,6 @@ export function Footer() {
         <p>&copy; {new Date().getFullYear()} ElectronNexus. All rights reserved.</p>
       </div>
     </footer>
+    </>
   );
 }

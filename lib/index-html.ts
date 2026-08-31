@@ -150,7 +150,7 @@ img{max-width:100%;height:auto}
 .trust-stat .label{font-size:13px;color:var(--text-muted);margin-top:4px}
 
 /* FOOTER */
-.site-footer{background:var(--bg-card);border-top:1px solid var(--border);padding:48px 0 24px}
+.recommended-products{background:var(--bg);padding:0}.recommended-inner{max-width:100%;margin:0 auto;padding:0}.recommended-title{display:none}.recommended-iframe{width:100%;height:50vh;border:none;border-radius:0;background:#fff}\n.site-footer{background:var(--bg-card);border-top:1px solid var(--border);padding:48px 0 24px}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .footer-brand .logo{margin-bottom:12px;display:inline-block}
 .footer-brand p{font-size:14px;color:var(--text-muted);line-height:1.6}
@@ -191,6 +191,13 @@ img{max-width:100%;height:auto}
 </ul>
 </div>
 </header>
+
+<!-- Recommended Products (首屏) -->
+<section class="recommended-products">
+<div class="recommended-inner">
+<iframe src="https://www.alibaba.com/showroom/consumer-electronics.html?outsite=1" class="recommended-iframe" title="Recommended Products"></iframe>
+</div>
+</section>
 
 <!-- HERO -->
 <section class="hero">
@@ -452,6 +459,7 @@ img{max-width:100%;height:auto}
 </section>
 
 <!-- FOOTER -->
+
 <footer class="site-footer">
 <div class="container">
 <div class="footer-inner">

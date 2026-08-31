@@ -3639,7 +3639,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/load-manifest.external.js": {
-      "bytes": 43873,
+      "bytes": 38471,
       "imports": [
         {
           "path": "path",
@@ -4176,19 +4176,8 @@
       ],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0dgx1mn._.js": {
-      "bytes": 219824,
-      "imports": [
-        {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0w7ktq2._.js": {
-      "bytes": 7071,
+    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0c8rvu5._.js": {
+      "bytes": 1885,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.prod.js",
@@ -4223,8 +4212,24 @@
       ],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/_0ot6lfc._.js": {
-      "bytes": 7089,
+    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0dgx1mn._.js": {
+      "bytes": 219824,
+      "imports": [
+        {
+          "path": "path",
+          "kind": "require-call",
+          "external": true
+        }
+      ],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/.next/server/chunks/ssr/_05eoqv4._.js": {
+      "bytes": 49143,
+      "imports": [],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/.next/server/chunks/ssr/_0tk3f7z._.js": {
+      "bytes": 16900,
       "imports": [],
       "format": "cjs"
     },
@@ -4238,8 +4243,8 @@
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0wzpc4e._.js": {
-      "bytes": 74513,
+    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0h9llsw._.js": {
+      "bytes": 74337,
       "imports": [],
       "format": "cjs"
     },
@@ -4382,7 +4387,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0.ikjqg.js": {
-      "bytes": 22643,
+      "bytes": 22589,
       "imports": [
         {
           "path": "path",
@@ -4393,7 +4398,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0s5rba_._.js": {
-      "bytes": 6875,
+      "bytes": 6930,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
@@ -4474,7 +4479,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0zq8nlp.js": {
-      "bytes": 22709,
+      "bytes": 22655,
       "imports": [
         {
           "path": "path",
@@ -4485,7 +4490,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0zw5o~2._.js": {
-      "bytes": 6270,
+      "bytes": 6297,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
@@ -4566,7 +4571,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_03wl2cf.js": {
-      "bytes": 22570,
+      "bytes": 22516,
       "imports": [
         {
           "path": "path",
@@ -4576,8 +4581,8 @@
       ],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0amff4c._.js": {
-      "bytes": 7471,
+    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0rg4f_y._.js": {
+      "bytes": 7647,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.prod.js",
@@ -4630,33 +4635,6 @@
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0rc3ul_.js": {
       "bytes": 22144,
-      "imports": [
-        {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0x~dheb._.js": {
-      "bytes": 2535,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
-          "kind": "require-call",
-          "original": "next/dist/shared/lib/no-fallback-error.external.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_about_page_actions_0j9pj4n.js": {
-      "bytes": 116,
-      "imports": [],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_00jm33e.js": {
-      "bytes": 22477,
       "imports": [
         {
           "path": "path",
@@ -4835,7 +4813,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06simro._.js": {
-      "bytes": 4091,
+      "bytes": 4147,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
@@ -4927,7 +4905,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__081gmng._.js": {
-      "bytes": 3101,
+      "bytes": 3129,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
@@ -5009,60 +4987,6 @@
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0s7v8wx.js": {
       "bytes": 22482,
-      "imports": [
-        {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0nbnj64._.js": {
-      "bytes": 2039,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
-          "kind": "require-call",
-          "original": "next/dist/shared/lib/no-fallback-error.external.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_contact_page_actions_0bxfoqb.js": {
-      "bytes": 119,
-      "imports": [],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0xvi_bh.js": {
-      "bytes": 22487,
-      "imports": [
-        {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0p0mz6y._.js": {
-      "bytes": 3094,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
-          "kind": "require-call",
-          "original": "next/dist/shared/lib/no-fallback-error.external.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_privacy-policy_page_actions_0k30hvs.js": {
-      "bytes": 126,
-      "imports": [],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0_2u9dy.js": {
-      "bytes": 22522,
       "imports": [
         {
           "path": "path",
@@ -5179,39 +5103,12 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/node_modules_0.rhzag._.js": {
-      "bytes": 818635,
+      "bytes": 819145,
       "imports": [],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06d2iyv._.js": {
-      "bytes": 3279,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/node_modules/next/dist/shared/lib/no-fallback-error.external.js",
-          "kind": "require-call",
-          "original": "next/dist/shared/lib/no-fallback-error.external.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_terms-of-service_page_actions_0oq-ll4.js": {
-      "bytes": 128,
-      "imports": [],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0pcj6a5.js": {
-      "bytes": 22532,
-      "imports": [
-        {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        }
-      ],
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js": {
-      "bytes": 48197,
+      "bytes": 45332,
       "imports": [
         {
           "path": "worker_threads",
@@ -5254,14 +5151,14 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__00pzuab._.js"
         },
         {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0c8rvu5._.js",
+          "kind": "require-call",
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0c8rvu5._.js"
+        },
+        {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0dgx1mn._.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0dgx1mn._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0w7ktq2._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0w7ktq2._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
@@ -5269,9 +5166,14 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0ot6lfc._.js",
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_05eoqv4._.js",
           "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_0ot6lfc._.js"
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_05eoqv4._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0tk3f7z._.js",
+          "kind": "require-call",
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_0tk3f7z._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0eq97pa.js",
@@ -5284,9 +5186,9 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0i2xw~e._.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0wzpc4e._.js",
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0h9llsw._.js",
           "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0wzpc4e._.js"
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0h9llsw._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_06j6hww._.js",
@@ -5379,9 +5281,9 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_03wl2cf.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0amff4c._.js",
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0rg4f_y._.js",
           "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0amff4c._.js"
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0rg4f_y._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__10xgshr._.js",
@@ -5397,21 +5299,6 @@
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0rc3ul_.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0rc3ul_.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0x~dheb._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0x~dheb._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_about_page_actions_0j9pj4n.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_about_page_actions_0j9pj4n.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_00jm33e.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_00jm33e.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0op9af~._.js",
@@ -5464,36 +5351,6 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0s7v8wx.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0nbnj64._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0nbnj64._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_contact_page_actions_0bxfoqb.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_contact_page_actions_0bxfoqb.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0xvi_bh.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0xvi_bh.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0p0mz6y._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0p0mz6y._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_privacy-policy_page_actions_0k30hvs.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_privacy-policy_page_actions_0k30hvs.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0_2u9dy.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0_2u9dy.js"
-        },
-        {
           "path": ".open-next/server-functions/default/.next/server/chunks/[externals]__06pi_~5._.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/[externals]__06pi_~5._.js"
@@ -5507,21 +5364,6 @@
           "path": ".open-next/server-functions/default/.next/server/chunks/node_modules_0.rhzag._.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/node_modules_0.rhzag._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06d2iyv._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06d2iyv._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_terms-of-service_page_actions_0oq-ll4.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_terms-of-service_page_actions_0oq-ll4.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0pcj6a5.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0pcj6a5.js"
         },
         {
           "path": "<runtime>",
@@ -5532,7 +5374,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js": {
-      "bytes": 48207,
+      "bytes": 45342,
       "imports": [
         {
           "path": "worker_threads",
@@ -5575,14 +5417,14 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__00pzuab._.js"
         },
         {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0c8rvu5._.js",
+          "kind": "require-call",
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0c8rvu5._.js"
+        },
+        {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0dgx1mn._.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0dgx1mn._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0w7ktq2._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0w7ktq2._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
@@ -5590,9 +5432,14 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0ot6lfc._.js",
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_05eoqv4._.js",
           "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_0ot6lfc._.js"
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_05eoqv4._.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_0tk3f7z._.js",
+          "kind": "require-call",
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_0tk3f7z._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0eq97pa.js",
@@ -5605,9 +5452,9 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0i2xw~e._.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0wzpc4e._.js",
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0h9llsw._.js",
           "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0wzpc4e._.js"
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0h9llsw._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_06j6hww._.js",
@@ -5700,9 +5547,9 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_03wl2cf.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0amff4c._.js",
+          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0rg4f_y._.js",
           "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0amff4c._.js"
+          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0rg4f_y._.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__10xgshr._.js",
@@ -5718,21 +5565,6 @@
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0rc3ul_.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0rc3ul_.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0x~dheb._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0x~dheb._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_about_page_actions_0j9pj4n.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_about_page_actions_0j9pj4n.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_00jm33e.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_00jm33e.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/[root-of-the-server]__0op9af~._.js",
@@ -5785,36 +5617,6 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0s7v8wx.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0nbnj64._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0nbnj64._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_contact_page_actions_0bxfoqb.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_contact_page_actions_0bxfoqb.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0xvi_bh.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0xvi_bh.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0p0mz6y._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0p0mz6y._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_privacy-policy_page_actions_0k30hvs.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_privacy-policy_page_actions_0k30hvs.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0_2u9dy.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0_2u9dy.js"
-        },
-        {
           "path": ".open-next/server-functions/default/.next/server/chunks/[externals]__06pi_~5._.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/[externals]__06pi_~5._.js"
@@ -5828,21 +5630,6 @@
           "path": ".open-next/server-functions/default/.next/server/chunks/node_modules_0.rhzag._.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/node_modules_0.rhzag._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06d2iyv._.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06d2iyv._.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_terms-of-service_page_actions_0oq-ll4.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_terms-of-service_page_actions_0oq-ll4.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0pcj6a5.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0pcj6a5.js"
         },
         {
           "path": "<runtime>",
@@ -5870,28 +5657,6 @@
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
           "kind": "require-call",
           "original": "../../../chunks/ssr/[turbopack]_runtime.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/app/terms-of-service/page.js": {
-      "bytes": 910,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
-          "kind": "require-call",
-          "original": "../../chunks/ssr/[turbopack]_runtime.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/app/privacy-policy/page.js": {
-      "bytes": 906,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
-          "kind": "require-call",
-          "original": "../../chunks/ssr/[turbopack]_runtime.js"
         }
       ],
       "format": "cjs"
@@ -5951,30 +5716,8 @@
       ],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/app/contact/page.js": {
-      "bytes": 892,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
-          "kind": "require-call",
-          "original": "../../chunks/ssr/[turbopack]_runtime.js"
-        }
-      ],
-      "format": "cjs"
-    },
     ".open-next/server-functions/default/.next/server/app/author/page.js": {
       "bytes": 929,
-      "imports": [
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
-          "kind": "require-call",
-          "original": "../../chunks/ssr/[turbopack]_runtime.js"
-        }
-      ],
-      "format": "cjs"
-    },
-    ".open-next/server-functions/default/.next/server/app/about/page.js": {
-      "bytes": 888,
       "imports": [
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js",
@@ -5996,7 +5739,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
-      "bytes": 7013,
+      "bytes": 6145,
       "imports": [
         {
           "path": "path",
@@ -6054,16 +5797,6 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/[category]/[slug]/page.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/app/terms-of-service/page.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/terms-of-service/page.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/app/privacy-policy/page.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/privacy-policy/page.js"
-        },
-        {
           "path": ".open-next/server-functions/default/.next/server/app/_global-error/page.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/_global-error/page.js"
@@ -6089,19 +5822,9 @@
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/_not-found/page.js"
         },
         {
-          "path": ".open-next/server-functions/default/.next/server/app/contact/page.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/contact/page.js"
-        },
-        {
           "path": ".open-next/server-functions/default/.next/server/app/author/page.js",
           "kind": "require-call",
           "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/author/page.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/app/about/page.js",
-          "kind": "require-call",
-          "original": "/data/vercel-projects/electronnexus/.open-next/server-functions/default/.next/server/app/about/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/route.js",
@@ -7271,7 +6994,7 @@
       "format": "esm"
     },
     ".open-next/server-functions/default/index.mjs": {
-      "bytes": 87319,
+      "bytes": 85030,
       "imports": [
         {
           "path": "node:module",
@@ -7786,11 +7509,6 @@
           "external": true
         },
         {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        },
-        {
           "path": "url",
           "kind": "require-call",
           "external": true
@@ -7961,16 +7679,6 @@
           "external": true
         },
         {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        },
-        {
-          "path": "path",
-          "kind": "require-call",
-          "external": true
-        },
-        {
           "path": "util",
           "kind": "require-call",
           "external": true
@@ -8037,11 +7745,6 @@
         },
         {
           "path": "node:diagnostics_channel",
-          "kind": "require-call",
-          "external": true
-        },
-        {
-          "path": "path",
           "kind": "require-call",
           "external": true
         },
@@ -8942,7 +8645,7 @@
           "bytesInOutput": 440
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/load-manifest.external.js": {
-          "bytesInOutput": 33997
+          "bytesInOutput": 29987
         },
         ".open-next/cloudflare-templates/shims/throw.js": {
           "bytesInOutput": 215
@@ -9019,14 +8722,17 @@
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__00pzuab._.js": {
           "bytesInOutput": 2877
         },
+        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0c8rvu5._.js": {
+          "bytesInOutput": 1810
+        },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0dgx1mn._.js": {
           "bytesInOutput": 232497
         },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0w7ktq2._.js": {
-          "bytesInOutput": 7172
+        ".open-next/server-functions/default/.next/server/chunks/ssr/_05eoqv4._.js": {
+          "bytesInOutput": 50250
         },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/_0ot6lfc._.js": {
-          "bytesInOutput": 7247
+        ".open-next/server-functions/default/.next/server/chunks/ssr/_0tk3f7z._.js": {
+          "bytesInOutput": 17115
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app__not-found_page_actions_0eq97pa.js": {
           "bytesInOutput": 270
@@ -9034,8 +8740,8 @@
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_0i2xw~e._.js": {
           "bytesInOutput": 110323
         },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0wzpc4e._.js": {
-          "bytesInOutput": 77029
+        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_0h9llsw._.js": {
+          "bytesInOutput": 76853
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_client_components_06j6hww._.js": {
           "bytesInOutput": 6005
@@ -9071,28 +8777,28 @@
           "bytesInOutput": 668
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0.ikjqg.js": {
-          "bytesInOutput": 22847
+          "bytesInOutput": 22793
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0s5rba_._.js": {
-          "bytesInOutput": 7102
+          "bytesInOutput": 7157
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_[category]_page_[pageNum]_page_actions_0~kdi6o.js": {
           "bytesInOutput": 297
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0zq8nlp.js": {
-          "bytesInOutput": 22913
+          "bytesInOutput": 22859
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0zw5o~2._.js": {
-          "bytesInOutput": 6456
+          "bytesInOutput": 6483
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_[category]_page_actions_0eozn5w.js": {
           "bytesInOutput": 268
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_03wl2cf.js": {
-          "bytesInOutput": 22774
+          "bytesInOutput": 22720
         },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0amff4c._.js": {
-          "bytesInOutput": 7401
+        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0rg4f_y._.js": {
+          "bytesInOutput": 7577
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__10xgshr._.js": {
           "bytesInOutput": 6243
@@ -9102,15 +8808,6 @@
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0rc3ul_.js": {
           "bytesInOutput": 22347
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0x~dheb._.js": {
-          "bytesInOutput": 2628
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_about_page_actions_0j9pj4n.js": {
-          "bytesInOutput": 260
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_00jm33e.js": {
-          "bytesInOutput": 22681
         },
         ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js": {
           "bytesInOutput": 180066
@@ -9125,7 +8822,7 @@
           "bytesInOutput": 268
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06simro._.js": {
-          "bytesInOutput": 4244
+          "bytesInOutput": 4300
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_author_[slug]_page_actions_02vq1j9.js": {
           "bytesInOutput": 275
@@ -9134,31 +8831,13 @@
           "bytesInOutput": 22753
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__081gmng._.js": {
-          "bytesInOutput": 3230
+          "bytesInOutput": 3258
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_author_page_actions_0gr3-fu.js": {
           "bytesInOutput": 263
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0s7v8wx.js": {
           "bytesInOutput": 22686
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0nbnj64._.js": {
-          "bytesInOutput": 2132
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_contact_page_actions_0bxfoqb.js": {
-          "bytesInOutput": 265
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0xvi_bh.js": {
-          "bytesInOutput": 22691
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__0p0mz6y._.js": {
-          "bytesInOutput": 3187
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_privacy-policy_page_actions_0k30hvs.js": {
-          "bytesInOutput": 279
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0_2u9dy.js": {
-          "bytesInOutput": 22726
         },
         ".open-next/server-functions/default/.next/server/chunks/[externals]__06pi_~5._.js": {
           "bytesInOutput": 1751
@@ -9167,34 +8846,19 @@
           "bytesInOutput": 246
         },
         ".open-next/server-functions/default/.next/server/chunks/node_modules_0.rhzag._.js": {
-          "bytesInOutput": 1044677
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/[root-of-the-server]__06d2iyv._.js": {
-          "bytesInOutput": 3372
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/_next-internal_server_app_terms-of-service_page_actions_0oq-ll4.js": {
-          "bytesInOutput": 283
-        },
-        ".open-next/server-functions/default/.next/server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0pcj6a5.js": {
-          "bytesInOutput": 22736
+          "bytesInOutput": 1045193
         },
         ".open-next/server-functions/default/.next/server/chunks/[turbopack]_runtime.js": {
-          "bytesInOutput": 24058
+          "bytesInOutput": 22411
         },
         ".open-next/server-functions/default/.next/server/chunks/ssr/[turbopack]_runtime.js": {
-          "bytesInOutput": 24073
+          "bytesInOutput": 22426
         },
         ".open-next/server-functions/default/.next/server/app/[category]/page/[pageNum]/page.js": {
           "bytesInOutput": 1156
         },
         ".open-next/server-functions/default/.next/server/app/[category]/[slug]/page.js": {
           "bytesInOutput": 1202
-        },
-        ".open-next/server-functions/default/.next/server/app/terms-of-service/page.js": {
-          "bytesInOutput": 1030
-        },
-        ".open-next/server-functions/default/.next/server/app/privacy-policy/page.js": {
-          "bytesInOutput": 1024
         },
         ".open-next/server-functions/default/.next/server/app/_global-error/page.js": {
           "bytesInOutput": 710
@@ -9211,20 +8875,14 @@
         ".open-next/server-functions/default/.next/server/app/_not-found/page.js": {
           "bytesInOutput": 914
         },
-        ".open-next/server-functions/default/.next/server/app/contact/page.js": {
-          "bytesInOutput": 1003
-        },
         ".open-next/server-functions/default/.next/server/app/author/page.js": {
-          "bytesInOutput": 1040
-        },
-        ".open-next/server-functions/default/.next/server/app/about/page.js": {
-          "bytesInOutput": 998
+          "bytesInOutput": 1039
         },
         ".open-next/server-functions/default/.next/server/app/route.js": {
           "bytesInOutput": 451
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
-          "bytesInOutput": 3973
+          "bytesInOutput": 3609
         },
         ".open-next/server-functions/default/node_modules/next/dist/lib/wait.js": {
           "bytesInOutput": 341
@@ -9371,10 +9029,10 @@
           "bytesInOutput": 5074
         },
         ".open-next/server-functions/default/index.mjs": {
-          "bytesInOutput": 60759
+          "bytesInOutput": 58757
         }
       },
-      "bytes": 5211785
+      "bytes": 5150095
     }
   }
 }
