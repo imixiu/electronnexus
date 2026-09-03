@@ -64,21 +64,53 @@ export function middleware(request: NextRequest) {
     // CF Bot Management available (paid feature)
     isBot = bm.verifiedBot === true || bm.score < 30;
   } else {
-    // Fallback: comprehensive UA-based detection
+    // Fallback: comprehensive UA-based detection (all lowercase, UA already lowercased)
     const ua = (request.headers.get("user-agent") || "").toLowerCase();
     const botPatterns = [
-      "googlebot", "bingbot", "baiduspider", "yandex", "duckduckbot",
-      "slurp", "applebot", "facebookexternalhit", "facebookcatalog",
-      "twitterbot", "linkedinbot", "slackbot", "discordbot", "whatsapp",
-      "pinterestbot", "semrushbot", "ahrefsbot", "mj12bot", "dotbot",
-      "petalbot", "bytespider", "sogou", "exabot", "ia_archiver",
-      "screaming frog", "crawler", "spider", "bot/", "bot;",
-      "headlesschrome", "phantomjs", "wget", "curl", "python-requests",
-      "scrapy", "httpclient", "apache-httpclient", "okhttp",
-      "google-structured-data", "google-read-aloud", "google-safety",
-      "mediapartners-google", "adsbot-google", "google-physicalweb",
-      "lighthouse", "pagespeed", "gtmetrix", "pingdom", "uptimerobot",
-      "sitechecker", "woorank", "seositecheckup",
+      // Search engine crawlers
+      "googlebot", "google-structured-data", "google-read-aloud",
+      "google-safety", "mediapartners-google", "adsbot-google",
+      "google-physicalweb", "google-inspectiontool",
+      "bingbot", "msnbot", "bingpreview",
+      "yandex", "yandexbot", "yandeximages", "yandexvideo",
+      "yandexmediabot", "yandexmetrika",
+      "baiduspider", "baidu-image", "baidu-mobaider",
+      "duckduckbot", "applebot", "applebot-extended",
+      "yahoo", "slurp", "y!j", "y!j-brw", "y!j-asr",
+      "naver", "yeti", "naverbot", "me2day",
+      "daum", "daumoa", "daumweb",
+      "seznam", "seznambot",
+      "sogou", "sogou web spider", "sogou orion spider",
+      "360spider", "sosospider", "qihoo",
+      "petalbot", "bytespider", "toutiao",
+      
+      // SEO/monitoring tools
+      "semrushbot", "semrush", "ahrefsbot", "ahrefs",
+      "mj12bot", "dotbot", "rogerbot", "screaming frog",
+      "lighthouse", "pagespeed", "gtmetrix", "pingdom",
+      "uptimerobot", "sitechecker", "woorank", "seositecheckup",
+      "majestic", "mozbot", "cognitiveseo", "seranking",
+      "similarweb", "builtwith", "wappalyzer",
+      
+      // Social media / preview bots
+      "facebookexternalhit", "facebookcatalog", "facebot",
+      "twitterbot", "linkedinbot", "slackbot", "discordbot",
+      "telegrambot", "whatsapp", "viber", "skypeuripreview",
+      "pinterestbot", "line/", "wechat",
+      
+      // Generic bot patterns
+      "crawler", "spider", "bot/", "bot;", "bot-", "robot",
+      "ia_archiver", "exabot", "alexabot",
+      
+      // Headless/automation tools
+      "headlesschrome", "phantomjs", "puppeteer", "playwright",
+      "selenium", "webdriver", "cypress", "nightmare",
+      
+      // HTTP clients / scrapers
+      "wget", "curl", "python-requests", "scrapy",
+      "httpclient", "apache-httpclient", "okhttp",
+      "java/", "go-http-client", "node-fetch",
+      "axios", "libwww-perl", "ruby", "perl",
     ];
     isBot = botPatterns.some((p) => ua.includes(p));
   }
