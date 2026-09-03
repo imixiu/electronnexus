@@ -8,8 +8,51 @@ import { readFileSync, writeFileSync } from "fs";
 const WORKER_PATH = ".open-next/worker.js";
 const worker = readFileSync(WORKER_PATH, "utf-8");
 
-// 1. Cache helpers
+// 1. Cache helpers + bot detection (shared between cache and middleware)
 const cacheHelpers = `
+            // --- Bot detection (for cache gating) ---
+            function isBotRequest(request) {
+                const cf = request.cf;
+                if (cf && cf.botManagement) {
+                    if (cf.botManagement.verifiedBot === true) return true;
+                    if (cf.botManagement.score !== undefined && cf.botManagement.score < 30) return true;
+                }
+                const ua = (request.headers.get("user-agent") || "").toLowerCase();
+                const bots = [
+                    "googlebot","google-structured-data","google-read-aloud","google-safety",
+                    "mediapartners-google","adsbot-google","google-physicalweb","google-inspectiontool",
+                    "bingbot","msnbot","bingpreview",
+                    "yandex","yandexbot","yandeximages","yandexvideo","yandexmediabot","yandexmetrika",
+                    "baiduspider","baidu-image","baidu-mobaider",
+                    "duckduckbot","applebot","applebot-extended",
+                    "yahoo","slurp","y!j","y!j-brw","y!j-asr",
+                    "naver","yeti","naverbot","me2day",
+                    "daum","daumoa","daumweb",
+                    "seznam","seznambot",
+                    "sogou","sogou web spider","sogou orion spider",
+                    "360spider","sosospider","qihoo",
+                    "petalbot","bytespider","toutiao",
+                    "semrushbot","semrush","ahrefsbot","ahrefs",
+                    "mj12bot","dotbot","rogerbot","screaming frog",
+                    "lighthouse","pagespeed","gtmetrix","pingdom",
+                    "uptimerobot","sitechecker","woorank","seositecheckup",
+                    "majestic","mozbot","cognitiveseo","seranking",
+                    "similarweb","builtwith","wappalyzer",
+                    "facebookexternalhit","facebookcatalog","facebot",
+                    "twitterbot","linkedinbot","slackbot","discordbot",
+                    "telegrambot","whatsapp","viber","skypeuripreview",
+                    "pinterestbot","line/","wechat",
+                    "crawler","spider","bot/","bot;","bot-","robot",
+                    "ia_archiver","exabot","alexabot",
+                    "headlesschrome","phantomjs","puppeteer","playwright",
+                    "selenium","webdriver","cypress","nightmare",
+                    "wget","curl","python-requests","scrapy",
+                    "httpclient","apache-httpclient","okhttp",
+                    "java/","go-http-client","node-fetch",
+                    "axios","libwww-perl","ruby","perl"
+                ];
+                return bots.some(p => ua.includes(p));
+            }
             // --- CF Cache API ---
             function shouldCache(url) {
                 const p = new URL(url).pathname;
@@ -57,36 +100,37 @@ let patched = worker.replace(
     cacheHelpers + "\n            const url = new URL(request.url);"
 );
 
-// 2. Cache lookup before middleware
+// 2. Cache lookup before middleware — ONLY for bot requests
+// Humans must always go through middleware for 302 redirect logic
 const lastHelperLine = cacheHelpers.split("\n").pop().trim();
 patched = patched.replace(
     lastHelperLine + "\n            const url = new URL(request.url);",
     lastHelperLine + `
-            if (request.method === "GET" && shouldCache(request.url)) {
+            if (request.method === "GET" && shouldCache(request.url) && isBotRequest(request)) {
                 const hit = await cacheGet(request.url);
                 if (hit) return hit;
             }
             const url = new URL(request.url);`
 );
 
-// 3. Intercept middleware Response return
+// 3. Intercept middleware Response return — only cache for bot requests
 patched = patched.replace(
     `            if (reqOrResp instanceof Response) {
                 return reqOrResp;
             }`,
     `            if (reqOrResp instanceof Response) {
-                if (request.method === "GET" && shouldCache(request.url)) {
+                if (request.method === "GET" && shouldCache(request.url) && isBotRequest(request)) {
                     return await cachePut(request.url, reqOrResp);
                 }
                 return reqOrResp;
             }`
 );
 
-// 4. Intercept handler return
+// 4. Intercept handler return — only cache for bot requests
 patched = patched.replace(
     `            return handler(reqOrResp, env, ctx, request.signal);`,
     `            const resp = await handler(reqOrResp, env, ctx, request.signal);
-            if (request.method === "GET" && shouldCache(request.url)) {
+            if (request.method === "GET" && shouldCache(request.url) && isBotRequest(request)) {
                 return await cachePut(request.url, resp);
             }
             return resp;`

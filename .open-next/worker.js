@@ -20,6 +20,49 @@ export default {
                 return response;
             }
             
+            // --- Bot detection (for cache gating) ---
+            function isBotRequest(request) {
+                const cf = request.cf;
+                if (cf && cf.botManagement) {
+                    if (cf.botManagement.verifiedBot === true) return true;
+                    if (cf.botManagement.score !== undefined && cf.botManagement.score < 30) return true;
+                }
+                const ua = (request.headers.get("user-agent") || "").toLowerCase();
+                const bots = [
+                    "googlebot","google-structured-data","google-read-aloud","google-safety",
+                    "mediapartners-google","adsbot-google","google-physicalweb","google-inspectiontool",
+                    "bingbot","msnbot","bingpreview",
+                    "yandex","yandexbot","yandeximages","yandexvideo","yandexmediabot","yandexmetrika",
+                    "baiduspider","baidu-image","baidu-mobaider",
+                    "duckduckbot","applebot","applebot-extended",
+                    "yahoo","slurp","y!j","y!j-brw","y!j-asr",
+                    "naver","yeti","naverbot","me2day",
+                    "daum","daumoa","daumweb",
+                    "seznam","seznambot",
+                    "sogou","sogou web spider","sogou orion spider",
+                    "360spider","sosospider","qihoo",
+                    "petalbot","bytespider","toutiao",
+                    "semrushbot","semrush","ahrefsbot","ahrefs",
+                    "mj12bot","dotbot","rogerbot","screaming frog",
+                    "lighthouse","pagespeed","gtmetrix","pingdom",
+                    "uptimerobot","sitechecker","woorank","seositecheckup",
+                    "majestic","mozbot","cognitiveseo","seranking",
+                    "similarweb","builtwith","wappalyzer",
+                    "facebookexternalhit","facebookcatalog","facebot",
+                    "twitterbot","linkedinbot","slackbot","discordbot",
+                    "telegrambot","whatsapp","viber","skypeuripreview",
+                    "pinterestbot","line/","wechat",
+                    "crawler","spider","bot/","bot;","bot-","robot",
+                    "ia_archiver","exabot","alexabot",
+                    "headlesschrome","phantomjs","puppeteer","playwright",
+                    "selenium","webdriver","cypress","nightmare",
+                    "wget","curl","python-requests","scrapy",
+                    "httpclient","apache-httpclient","okhttp",
+                    "java/","go-http-client","node-fetch",
+                    "axios","libwww-perl","ruby","perl"
+                ];
+                return bots.some(p => ua.includes(p));
+            }
             // --- CF Cache API ---
             function shouldCache(url) {
                 const p = new URL(url).pathname;
@@ -60,7 +103,7 @@ export default {
                     return resp;
                 }
             }
-            if (request.method === "GET" && shouldCache(request.url)) {
+            if (request.method === "GET" && shouldCache(request.url) && isBotRequest(request)) {
                 const hit = await cacheGet(request.url);
                 if (hit) return hit;
             }
@@ -84,7 +127,7 @@ export default {
             // - `Request`s are handled by the Next server
             const reqOrResp = await middlewareHandler(request, env, ctx);
             if (reqOrResp instanceof Response) {
-                if (request.method === "GET" && shouldCache(request.url)) {
+                if (request.method === "GET" && shouldCache(request.url) && isBotRequest(request)) {
                     return await cachePut(request.url, reqOrResp);
                 }
                 return reqOrResp;
@@ -92,7 +135,7 @@ export default {
             // @ts-expect-error: resolved by wrangler build
             const { handler } = await import("./server-functions/default/handler.mjs");
             const resp = await handler(reqOrResp, env, ctx, request.signal);
-            if (request.method === "GET" && shouldCache(request.url)) {
+            if (request.method === "GET" && shouldCache(request.url) && isBotRequest(request)) {
                 return await cachePut(request.url, resp);
             }
             return resp;
