@@ -13,14 +13,14 @@ const SHOWROOM_MAP: Record<string, string> = {
 };
 
 const SHOWROOM_DEFAULT =
-  "https://www.alibaba.com/showroom/consumer-electronics.html?outsite=1";
+  "https://www.alibaba.com/showroom/consumer-electronics.html?ots=electronnexus";
 
 function getShowroomUrl(pathname: string): string {
   const segments = pathname.split("/").filter(Boolean);
   if (segments.length > 0) {
     const cat = SHOWROOM_MAP[segments[0]];
     if (cat)
-      return `https://www.alibaba.com/showroom/${cat}.html?outsite=1`;
+      return `https://www.alibaba.com/showroom/${cat}.html?ots=electronnexus`;
   }
   return SHOWROOM_DEFAULT;
 }
