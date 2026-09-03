@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { RecommendedProducts } from "@/components/layout/RecommendedProducts";
+import { ShowroomModal } from "@/components/layout/ShowroomModal";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -74,9 +74,9 @@ export default function RootLayout({
         </Script>
         
         <Header />
-        <RecommendedProducts />
         <main>{children}</main>
         <Footer />
+        <ShowroomModal />
       </body>
     </html>
   );

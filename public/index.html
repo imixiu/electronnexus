@@ -140,7 +140,6 @@ img{max-width:100%;height:auto}
 .trust-stat .label{font-size:13px;color:var(--text-muted);margin-top:4px}
 
 /* FOOTER */
-.recommended-products{background:var(--bg);padding:0}.recommended-inner{max-width:100%;margin:0 auto;padding:0}.recommended-title{display:none}.recommended-iframe{width:100%;height:50vh;border:none;border-radius:0;background:#fff}
 .site-footer{background:var(--bg-card);border-top:1px solid var(--border);padding:48px 0 24px}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .footer-brand .logo{margin-bottom:12px;display:inline-block}
@@ -181,13 +180,6 @@ img{max-width:100%;height:auto}
 </ul>
 </div>
 </header>
-
-<!-- Recommended Products (首屏) -->
-<section class="recommended-products">
-<div class="recommended-inner">
-<iframe src="https://www.alibaba.com/showroom/consumer-electronics.html?outsite=1" class="recommended-iframe" title="Recommended Products"></iframe>
-</div>
-</section>
 
 <!-- HERO -->
 <section class="hero">
@@ -476,5 +468,8 @@ img{max-width:100%;height:auto}
 </div>
 </footer>
 
+<div id="sr-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.7);align-items:center;justify-content:center;animation:srFadeIn .3s ease"><div style="position:relative;background:#1e293b;border:1px solid #334155;border-radius:16px;padding:40px 36px 32px;max-width:420px;width:90%;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.5);animation:srSlideUp .4s ease"><button onclick="document.getElementById('sr-modal').style.display='none'" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#94a3b8;font-size:20px;cursor:pointer;line-height:1;padding:4px" aria-label="Close">✕</button><div style="font-size:40px;margin-bottom:12px">🔌</div><h2 style="font-size:22px;font-weight:700;color:#f8fafc;margin:0 0 10px">Discover Top Electronics Deals</h2><p style="font-size:14px;color:#94a3b8;line-height:1.6;margin:0 0 24px">Browse wholesale prices and verified suppliers on Alibaba — the world's largest B2B marketplace for consumer electronics.</p><a href="https://www.alibaba.com/showroom/consumer-electronics.html?outsite=1" target="_blank" rel="noopener" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:14px 32px;border-radius:10px">Browse Products →</a><br><button onclick="document.getElementById('sr-modal').style.display='none'" style="margin-top:16px;background:none;border:none;color:#64748b;font-size:13px;cursor:pointer">No thanks, continue reading</button></div></div>
+<style>@keyframes srFadeIn{from{opacity:0}to{opacity:1}}@keyframes srSlideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}</style>
+<script>(function(){if(!sessionStorage.getItem('_en_modal_shown')){setTimeout(function(){var m=document.getElementById('sr-modal');if(m){m.style.display='flex';m.addEventListener('click',function(e){if(e.target===m)m.style.display='none'})}sessionStorage.setItem('_en_modal_shown','1')},1500)}})();</script>
 </body>
 </html>

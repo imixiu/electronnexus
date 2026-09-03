@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 @import "tailwindcss";
 
 :root {
@@ -77,27 +81,6 @@ a:hover {
 .site-header .main-nav a:hover {
   color: var(--text);
   background: var(--bg-card);
-}
-
-/* Recommended Products */
-.recommended-products {
-  background: var(--bg);
-  padding: 0;
-}
-.recommended-inner {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-.recommended-title {
-  display: none;
-}
-.recommended-iframe {
-  width: 100%;
-  height: 50vh;
-  border: none;
-  border-radius: 0;
-  background: #fff;
 }
 
 /* Footer */
@@ -824,3 +807,18 @@ a:hover {
 .static-page-inner ul { padding-left: 24px; margin-bottom: 12px; }
 .static-page-inner a { color: #d97706; text-decoration: underline; }
 .static-page-inner a:hover { color: #92400e; }
+
+/* ── Showroom DOM Modal ── */
+.sr-modal-overlay{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;animation:srFadeIn .3s ease}
+.sr-modal-card{position:relative;background:#1e293b;border:1px solid #334155;border-radius:16px;padding:40px 36px 32px;max-width:420px;width:90%;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.5);animation:srSlideUp .4s ease}
+.sr-modal-close{position:absolute;top:14px;right:16px;background:none;border:none;color:#94a3b8;font-size:20px;cursor:pointer;line-height:1;padding:4px}
+.sr-modal-close:hover{color:#f8fafc}
+.sr-modal-icon{font-size:40px;margin-bottom:12px}
+.sr-modal-title{font-size:22px;font-weight:700;color:#f8fafc;margin:0 0 10px}
+.sr-modal-desc{font-size:14px;color:#94a3b8;line-height:1.6;margin:0 0 24px}
+.sr-modal-cta{display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:14px 32px;border-radius:10px;transition:opacity .2s}
+.sr-modal-cta:hover{opacity:.9}
+.sr-modal-skip{display:block;margin:16px auto 0;background:none;border:none;color:#64748b;font-size:13px;cursor:pointer}
+.sr-modal-skip:hover{color:#94a3b8}
+@keyframes srFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes srSlideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
