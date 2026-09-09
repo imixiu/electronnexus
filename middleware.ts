@@ -111,6 +111,8 @@ export function middleware(request: NextRequest) {
       "httpclient", "apache-httpclient", "okhttp",
       "java/", "go-http-client", "node-fetch",
       "axios", "libwww-perl", "ruby", "perl",
+      "chatgpt-user",
+      "hanaleibot", "brightbot", "yisou",
     ];
     isBot = botPatterns.some((p) => ua.includes(p));
   }
