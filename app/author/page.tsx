@@ -1,4 +1,4 @@
-export const revalidate = 31536000;
+export const revalidate = 0;
 
 import { getAllAuthors } from "@/lib/queries";
 import { siteConfig } from "@/lib/site-config";

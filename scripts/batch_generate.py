@@ -318,7 +318,22 @@ def main():
     print(f"Slugs: {len(all_slugs)}", flush=True)
     if not all_slugs:
         print("No slugs"); sys.exit(1)
-    classified = [(classify_slug(s), s) for s in all_slugs]
+    # 2026-09-11 fix: exclude consumed slugs BEFORE selection — random picks from
+    # the full pool almost never hit fresh slugs on exhausted sites (To process: 0)
+    ckpt_file = OUTPUT_DIR / "checkpoint.json"
+    completed = load_checkpoint(ckpt_file)
+    _used_file = DATA_DIR / "used_slugs.json"
+    _used = set()
+    if _used_file.exists():
+        try:
+            with open(_used_file) as f: _used = set(json.load(f))
+        except Exception: pass
+    avail_slugs = [s for s in all_slugs if s not in completed and s not in _used]
+    print(f"Available: {len(avail_slugs)} / {len(all_slugs)}", flush=True)
+    if not avail_slugs:
+        print("No available slugs (all consumed) — run slug collector", flush=True)
+        return
+    classified = [(classify_slug(s), s) for s in avail_slugs]
     for t in TYPES:
         print(f"  {t}: {sum(1 for c,_ in classified if c==t)}", flush=True)
     per_type = TARGET // len(TYPES)
@@ -330,9 +345,7 @@ def main():
         take = min(per_type + (1 if i < remainder else 0), len(pool))
         selected.extend([(t, s) for s in pool[:take]])
     random.shuffle(selected)
-    ckpt_file = OUTPUT_DIR / "checkpoint.json"
-    completed = load_checkpoint(ckpt_file)
-    tasks = [(i, len(selected), t, s) for i, (t, s) in enumerate(selected) if s not in completed]
+    tasks = [(i, len(selected), t, s) for i, (t, s) in enumerate(selected)]
     print(f"Target: {len(selected)} | Done: {len(completed)} | To process: {len(tasks)}", flush=True)
     if not tasks:
         print("All done"); return

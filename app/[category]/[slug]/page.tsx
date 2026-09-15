@@ -1,4 +1,4 @@
-export const revalidate = 31536000;
+export const revalidate = 0;
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
