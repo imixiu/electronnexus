@@ -2,32 +2,32 @@ Workers: 3 | Batch: 100 | Max rounds: 3
 
 ============================================================
 Round 1/3 — fetching articles without images...
-Found 18 without images | Already done: 66 | To process: 18
+Found 18 without images | Already done: 98 | To process: 18
 
   Batch 1/1: 18 articles
-  OK id=17002890 more/regret-care-and-maintenance
-  OK id=17002866 more/how-to-organize-screen
-  OK id=17002879 wearables/how-to-clean-ultra
-  OK id=17002894 wearables/truths-and-delivers-compared
-  OK id=17002924 more/how-to-match-spoiler-with-watc
-  OK id=17002937 smarthome/truths-common-mistakes
-  OK id=17002945 smartphones/hype-safety-tips
-  OK id=17002943 audio/practical-alternatives-to-trac
-  OK id=17002957 laptopspcs/value-buying-guide
-  OK id=17002965 audio/truths-care-and-maintenance
-  OK id=17003110 audio/best-audio-for-tracking
-  OK id=17003113 laptopspcs/comfort-for-beginners
-  OK id=17003118 smartphones/best-audio-for-battery
-  OK id=17003119 gaming/how-to-match-benchmarks-with-s
-  OK id=17003126 laptopspcs/how-to-match-buyers-with-compa
-  OK id=17003140 smartphones/real-alternatives-to-life
-  OK id=17003187 smarthome/laptopspcs-tools-checklist
-  OK id=17003188 smarthome/band-smarthome-essentials
+  OK id=17006059 more/best-choose-life
+  OK id=17006062 audio/best-daily-performance
+  OK id=17006063 gaming/mistakes-common-mistakes
+  OK id=17006067 smarthome/best-more-for-days
+  OK id=17006070 gaming/how-to-choose-setup
+  OK id=17006077 smarthome/compared-on-a-budget
+  OK id=17006084 audio/hidden-and-work-compared
+  OK id=17006102 smartphones/negotiable-faq-answered
+  OK id=17006112 gaming/best-smarthome-for-right
+  OK id=17006121 smartphones/best-gaming-for-systems
+  OK id=17006280 more/wrist-checklist
+  OK id=17006288 audio/band-for-beginners
+  OK id=17006282 more/wrist-alternatives-to-world
+  OK id=17006304 smarthome/best-wearables-for-negotiable
+  OK id=17006314 wearables/audio-audio-essentials
+  OK id=17006305 laptopspcs/audio-on-a-budget
+  OK id=17006336 laptopspcs/how-to-start-gaming
+  OK id=17006329 wearables/exactly-and-cost-compared
   Batch done: 18 ok, 0 fail (cumulative)
 
   Round 1 complete. Remaining without images: 0
   All articles have images. Done!
 
 ============================================================
-Done! Success: 18 Failed: 0 Time: 0.8min Rate: 2.7s/img
+Done! Success: 18 Failed: 0 Time: 0.7min Rate: 2.5s/img
 ============================================================
